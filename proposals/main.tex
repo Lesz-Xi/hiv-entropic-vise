@@ -2,12 +2,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[margin=0.5in]{geometry}
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{mathptmx}  % Times New Roman font
 \usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{booktabs}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
 \usepackage{enumitem}
 \usepackage{longtable}
 \usepackage{array}
@@ -33,28 +32,13 @@
 A Physics-Based Framework for HIV-1 Eradication: Exploiting Entropy, Adversarial Prediction, and Real-Time Latency Detection
 \end{center}
 
-\textbf{Principal Investigator:} [PI Name]\\
-\textbf{Institution:} [Institution Name]\\
+\textbf{Principal Investigator:} Rhine Lesther Tague\\
+\textbf{Institution:} Mapúa Malayan Colleges Mindanao\\
 \textbf{Duration:} 36 Months (3 Years)\\
 \textbf{Requested Budget:} \$1,500,000 Direct Costs
 
 \hrulefill
 \vspace{12pt}
-
-
-
-NIH R01 GRANT APPLICATION
-
-
-EXPANDED RESEARCH PROPOSAL: The Sovereign Defense Architecture
-A First-Principles Approach to HIV Eradication: Connecting Thermodynamics, 
-Adversarial AI, and Zero-Trust Forensics
-
-Principal Investigator: The Sovereign Architect
-Institution: [Institution Name]
-Duration: 36 Months (3 Years)
-Requested Budget: $1,500,000 Direct Costs
-
 
 
 
@@ -78,26 +62,28 @@ CONSTRAINTS, NOT THE PRODUCTS.
 Traditional HIV therapeutics exhibit three fundamental vulnerabilities:
 
 \textbf{Vulnerability 1: Sequence-Dependent Targeting}
-- Current paradigm: Design inhibitors against specific amino acid sequences
-- Viral counter: Point mutations (M184V, K103N) confer resistance
-- Quantifiable failure: >50% of treatment-experienced patients harbor 
-  drug-resistant strains (DHHS Guidelines, 2023)
-- Root cause: Sequence space is vast (20^N possible variants for N residues)
+\begin{itemize}
+\item Current paradigm: Design inhibitors against specific amino acid sequences.
+\item Viral counter: Point mutations (M184V, K103N) confer resistance.
+\item Quantifiable failure: $>$50\% of treatment-experienced patients harbor drug-resistant strains (DHHS Guidelines, 2023).
+\item Root cause: Sequence space is vast ($20^N$ possible variants for N residues).
+\end{itemize}
 
 \textbf{Vulnerability 2: Functional Redundancy}
-- Current paradigm: Block essential viral functions (RT, protease, integrase)
-- Viral counter: Compensatory mutations restore function via alternate pathways
-- Example: Protease inhibitor resistance through Gag cleavage site mutations
-- Root cause: Biology evolves multiple solutions to the same functional problem
+\begin{itemize}
+\item Current paradigm: Block essential viral functions (RT, protease, integrase).
+\item Viral counter: Compensatory mutations restore function via alternate pathways.
+\item Example: Protease inhibitor resistance through Gag cleavage site mutations.
+\item Root cause: Biology evolves multiple solutions to the same functional problem.
+\end{itemize}
 
 \textbf{Vulnerability 3: Incomplete Viral Suppression}
-- Current paradigm: Reduce viral load to "undetectable" levels (<50 copies/mL)
-- Viral counter: Latent reservoirs persist for decades, rebound upon treatment 
-  cessation
-- Quantified gap: 10^6-10^7 latently infected cells remain despite 20+ years of 
-  suppressive ART
-- Root cause: Detection threshold is a measurement limit, not a biological 
-  reality
+\begin{itemize}
+\item Current paradigm: Reduce viral load to ``undetectable'' levels ($<$50 copies/mL).
+\item Viral counter: Latent reservoirs persist for decades, rebound upon treatment cessation.
+\item Quantified gap: $10^6$-$10^7$ latently infected cells remain despite 20+ years of suppressive ART \cite{Hosmane2017JEM}.
+\item Root cause: Detection threshold is a measurement limit, not a biological reality.
+\end{itemize}
 
 \subsection{A.3 INNOVATION: PHYSICS-BASED TARGETING IS SUPERIOR - THEORETICAL FOUNDATION}
 
@@ -107,88 +93,110 @@ This distinction is mathematically and evolutionarily profound:
 \textbf{Innovation 1: Immutability Through Energetic Constraints}
 
 Traditional biology identifies conserved sequences through alignment:
-- Conservation score = frequency of consensus residue across strains
-- Problem: Conservation ≠ immutability (conserved regions DO mutate)
-- Example: V3 loop is "conserved" yet highly variable within subtypes
+\begin{itemize}
+\item Conservation score = frequency of consensus residue across strains.
+\item Problem: Conservation $\neq$ immutability (conserved regions DO mutate).
+\item Example: V3 loop is ``conserved'' yet highly variable within subtypes.
+\end{itemize}
 
 Physics-based approach quantifies ENERGETIC COST of mutation \cite{Wylie2011PNAS,Gong2013eLife}:
-- Shannon entropy H = -Σ p(x) log₂ p(x) measures sequence variability
-- Regions with H = 0.0 bits have ZERO observed variation across ALL sequenced 
-  isolates
-- Interpretation: Mutations in these regions are LETHAL (thermodynamically 
-  forbidden)
+\begin{itemize}
+\item Shannon entropy $H = -\Sigma \, p(x) \log_2 p(x)$ measures sequence variability.
+\item Regions with $H = 0.0$ bits have ZERO observed variation across ALL sequenced isolates.
+\item Interpretation: Mutations in these regions are LETHAL (thermodynamically forbidden).
+\end{itemize}
 
-\textbf{The Entropic Vise (gp41 HR1, residues 568-576): H = 0.0 bits}
-- Data source: Los Alamos HIV Database (>500,000 sequences, 1983-2023)
-- Observation: ZERO naturally occurring variation in 40 years of evolution
-- Physical interpretation: This region CANNOT mutate without catastrophic 
-  loss of function
-- Mechanistic basis: HR1 forms six-helix bundle with HR2 during membrane 
-  fusion; thermodynamic stability requires precise hydrophobic packing
+\textbf{The Entropic Vise (gp41 HR1, residues 568-576): $H = 0.0$ bits}
+\begin{itemize}
+\item Data source: Los Alamos HIV Database ($>$500,000 sequences, 1983-2023).
+\item Observation: ZERO naturally occurring variation in 40 years of evolution.
+\item Physical interpretation: This region CANNOT mutate without catastrophic loss of function.
+\item Mechanistic basis: HR1 forms six-helix bundle with HR2 during membrane fusion; thermodynamic stability requires precise hydrophobic packing.
+\end{itemize}
 
 \textbf{Why this matters:}
-Traditional conserved epitopes show ~90-95% sequence identity (e.g., CD4 
-binding site). Physics-based targets show 100.0% identity not because evolution 
+Traditional conserved epitopes show $\sim$90-95\% sequence identity (e.g., CD4 
+binding site). Physics-based targets show 100.0\% identity not because evolution 
 hasn't tried, but because physics forbids it.
 
 \textbf{Innovation 2: Adversarial Prediction vs Reactive Observation}
 
 Traditional vaccine development is RETROSPECTIVE:
-1. Virus mutates and spreads
-2. New strain identified (months to years post-emergence)
-3. Vaccine designed against known strain
-4. Virus has already evolved to next variant
+\begin{enumerate}
+\item Virus mutates and spreads.
+\item New strain identified (months to years post-emergence).
+\item Vaccine designed against known strain.
+\item Virus has already evolved to next variant.
+\end{enumerate}
 
 Timeline example (SARS-CoV-2): Omicron emerged Nov 2021, vaccine available 
 Aug 2022 (9 months lag). Virus evolved 3 additional subvariants during this 
 window.
 
 Our TC-GAN (Thermodynamically Constrained GAN) approach is PROSPECTIVE:
-1. Generator creates synthetic variants constrained by physical laws
-2. Discriminator trained on real sequences distinguishes synthetic from natural
-3. Penalty term enforces H = 0.0 in Entropic Vise regions
-4. Output: Library of 10,000 "future mutants" that satisfy both:
-   - Viral fitness requirements (discriminator validation)
-   - Physical constraints (entropy penalty)
+\begin{enumerate}
+\item Generator creates synthetic variants constrained by physical laws.
+\item Discriminator trained on real sequences distinguishes synthetic from natural.
+\item Penalty term enforces $H = 0.0$ in Entropic Vise regions.
+\item Output: Library of 10,000 ``future mutants'' that satisfy both:
+  \begin{itemize}
+  \item Viral fitness requirements (discriminator validation).
+  \item Physical constraints (entropy penalty).
+  \end{itemize}
+\end{enumerate}
 
 \textbf{Mathematical Advantage:}
-- Traditional: Samples from empirical distribution (observed sequences only)
-- TC-GAN: Samples from constrained generative distribution (all physically 
-  possible sequences)
-- Coverage: Traditional approaches cover ~0.01% of sequence space; TC-GAN 
-  covers ~98% of physically accessible space
+\begin{itemize}
+\item Traditional: Samples from empirical distribution (observed sequences only).
+\item TC-GAN: Samples from constrained generative distribution (all physically possible sequences).
+\item Coverage: Traditional approaches cover $\sim$0.01\% of sequence space; TC-GAN covers $\sim$98\% of physically accessible space.
+\end{itemize}
 
 \textbf{Innovation 3: Active Detection vs Passive Measurement}
 
 Traditional latency measurement is PASSIVE:
-- Quantitative viral outgrowth assay (QVOA): Co-culture patient CD4+ T cells, 
-  measure viral production
-- Problem: Requires 2-3 weeks, labor-intensive, underestimates reservoir by 
-  60-fold \cite{Ho2013Cell,Siliciano2022AnnuRevPathol}
-- Interpretation: "Undetectable" = below assay sensitivity, NOT absence
+\begin{itemize}
+\item Quantitative viral outgrowth assay (QVOA): Co-culture patient CD4+ T cells, measure viral production.
+\item Problem: Requires 2-3 weeks, labor-intensive, underestimates reservoir by 60-fold \cite{Ho2013Cell,Siliciano2022AnnuRevPathol,Wang2018Retrovirology}.
+\item Interpretation: ``Undetectable'' = below assay sensitivity, NOT absence.
+\end{itemize}
 
 Our Sentinel Cell approach is ACTIVE (Zero-Trust Forensics):
-- Engineer autologous CD4+ T cells with Tat-responsive luciferase reporter
-- Reinfuse into patient as "honeypot" targets
-- Any viral reactivation triggers luminescent signal detectable in real-time
-- Interpretation: "Verified silent" = active monitoring confirms no 
-  reactivation, NOT measurement failure
+\begin{itemize}
+\item Engineer autologous CD4+ T cells with Tat-responsive luciferase reporter.
+\item Reinfuse into patient as ``honeypot'' targets.
+\item Any viral reactivation triggers luminescent signal detectable in real-time.
+\item Interpretation: ``Verified silent'' = active monitoring confirms no reactivation, NOT measurement failure.
+\end{itemize}
 
 \textbf{Analogy to Cybersecurity:}
-- Traditional: Firewall logs (passive recording of attacks)
-- Sentinel Cells: Honeytokens (active traps that guarantee detection of breach)
+\begin{itemize}
+\item Traditional: Firewall logs (passive recording of attacks).
+\item Sentinel Cells: Honeytokens (active traps that guarantee detection of breach).
+\end{itemize}
 
 \subsection{A.4 QUANTITATIVE SUPERIORITY OF PHYSICS-BASED TARGETING}
 
 We provide direct quantitative comparison:
 
-| Criterion | Traditional Biology | Physics-Based (This Proposal) |
-|-----------|-------------------|-------------------------------|
-| Mutation escape rate | 10^-5 per replication cycle | Theoretically zero (H=0.0 regions) |
-| Sequence coverage | Single strain or consensus | All physically allowed variants |
-| Development timeline | Reactive (years post-emergence) | Prospective (pre-emergence) |
-| Latency detection limit | 1 cell per 10^6 (QVOA) | Single reactivation event (Sentinel) |
-| Resistance mutations documented | Yes (>200 resistance mutations cataloged) | Impossible by thermodynamic constraint |
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{4cm}|p{4.5cm}|p{5cm}|}
+\hline
+\textbf{Criterion} & \textbf{Traditional Biology} & \textbf{Physics-Based (This Proposal)} \\
+\hline
+Mutation escape rate & $10^{-5}$ per replication cycle & Theoretically zero ($H=0.0$ regions) \\
+\hline
+Sequence coverage & Single strain or consensus & All physically allowed variants \\
+\hline
+Development timeline & Reactive (years post-emergence) & Prospective (pre-emergence) \\
+\hline
+Latency detection limit & 1 cell per $10^6$ (QVOA) & Single reactivation event (Sentinel) \\
+\hline
+Resistance mutations documented & Yes ($>$200 resistance mutations cataloged) & Impossible by thermodynamic constraint \\
+\hline
+\end{tabular}
+\end{table}
 
 \subsection{A.5 PRECEDENT FOR PHYSICS-BASED DRUG DESIGN}
 
@@ -196,31 +204,37 @@ This is not unprecedented. The most successful antivirals target physical
 constraints \cite{Klein2018mSphere,Redondo2017JRoySocInterface}:
 
 \textbf{Example 1: Neuraminidase Inhibitors (Influenza)}
-- Target: Catalytic residues (R118, D151, E119) conserved across ALL influenza 
-  strains
-- Mechanism: Essential for sialic acid chemistry (physical constraint)
-- Resistance: Rare (requires compensatory mutations that reduce fitness)
-- Success: Oseltamivir effective against H1N1, H3N2, H5N1, H7N9
+\begin{itemize}
+\item Target: Catalytic residues (R118, D151, E119) conserved across ALL influenza strains.
+\item Mechanism: Essential for sialic acid chemistry (physical constraint).
+\item Resistance: Rare (requires compensatory mutations that reduce fitness).
+\item Success: Oseltamivir effective against H1N1, H3N2, H5N1, H7N9.
+\end{itemize}
 
 \textbf{Example 2: HCV NS5B Polymerase Inhibitors (Sofosbuvir)}
-- Target: Nucleotide binding site (thermodynamically constrained geometry)
-- Mechanism: Mimics natural substrate (physical constraint)
-- Resistance: Extremely rare (S282T mutant has 90% reduced replication)
-- Success: >95% cure rate across all HCV genotypes
+\begin{itemize}
+\item Target: Nucleotide binding site (thermodynamically constrained geometry).
+\item Mechanism: Mimics natural substrate (physical constraint).
+\item Resistance: Extremely rare (S282T mutant has 90\% reduced replication).
+\item Success: $>$95\% cure rate across all HCV genotypes.
+\end{itemize}
 
-Our proposal applies this principle to HIV with three innovations:
-1. First-principles identification of thermodynamic dead zones (not empirical 
-   conservation)
-2. Adversarial AI to preemptively explore escape pathways
-3. Active forensic monitoring to eliminate latent reservoir uncertainty
+Our proposal applies this principle to HIV with three innovations \cite{Shum2013Pharmaceuticals,Chakraborty2022ACSInfectDis}:
+\begin{enumerate}
+\item First-principles identification of thermodynamic dead zones (not empirical conservation).
+\item Adversarial AI to preemptively explore escape pathways.
+\item Active forensic monitoring to eliminate latent reservoir uncertainty.
+\end{enumerate}
 
 \subsection{A.6 REVOLUTIONARY IMPACT}
 
 Success demonstrates that physics-based targeting is UNIVERSALLY APPLICABLE:
-- Influenza: Target hemagglutinin stem (thermodynamically conserved)
-- SARS-CoV-2: Target RBD residues constrained by ACE2 binding thermodynamics
-- Malaria: Target apicoplast metabolism (energetically essential)
-- Cancer: Target metabolic vulnerabilities (Warburg effect constraints)
+\begin{itemize}
+\item Influenza: Target hemagglutinin stem (thermodynamically conserved).
+\item SARS-CoV-2: Target RBD residues constrained by ACE2 binding thermodynamics.
+\item Malaria: Target apicoplast metabolism (energetically essential).
+\item Cancer: Target metabolic vulnerabilities (Warburg effect constraints).
+\end{itemize}
 
 This is not just an HIV cure. It is a FRAMEWORK for pathogen-agnostic defense.
 
@@ -236,12 +250,14 @@ This is not just an HIV cure. It is a FRAMEWORK for pathogen-agnostic defense.
 Our research strategy consists of three synergistic aims that together create a 
 comprehensive HIV eradication platform:
 
-AIM 1: Develop thermodynamically-targeted proteolytic agents (The Entropic Vise)
-AIM 2: Build adversarial AI system for prospective escape prediction (TC-GAN)
-AIM 3: Engineer sentinel cell surveillance system (Zero-Trust Bio-Forensics)
+\begin{itemize}
+\item \textbf{AIM 1:} Develop thermodynamically-targeted proteolytic agents (The Entropic Vise)
+\item \textbf{AIM 2:} Build adversarial AI system for prospective escape prediction (TC-GAN)
+\item \textbf{AIM 3:} Engineer sentinel cell surveillance system (Zero-Trust Bio-Forensics)
+\end{itemize}
 
-Timeline: 36 months (Years 1-3)
-Personnel: PI (20% effort), 3 Postdocs, 2 Graduate Students, 2 Technicians
+\textbf{Timeline:} 36 months (Years 1-3)\\
+\textbf{Personnel:} PI (20\% effort), 3 Postdocs, 2 Graduate Students, 2 Technicians
 
 
 AIM 1: THE ENTROPIC VISE - THERMODYNAMIC TARGETING
@@ -254,25 +270,25 @@ evolutionary conservation. We will exploit this immutability by designing
 aptamer-protease chimeras that irreversibly inactivate Env.
 
 HYPOTHESIS:
-Targeted proteolysis of the HR1 "Entropic Vise" will prevent membrane fusion 
+Targeted proteolysis of the HR1 ``Entropic Vise'' will prevent membrane fusion 
 and cannot be escaped through mutation without complete loss of viral fitness.
 
 \hrulefill
 
 \textbf{PRELIMINARY DATA: Computational Validation of the Entropic Vise}
 
-We have computationally validated the "Entropic Vise" hypothesis using 3,552 diverse HIV-1 envelope sequences from UniProt representing all major subtypes (A-D, CRFs).
+We have computationally validated the ``Entropic Vise'' hypothesis using 3,552 diverse HIV-1 envelope sequences from UniProt representing all major subtypes (A-D, CRFs).
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.85\textwidth]{entropy_analysis_figure1.png}
+\includegraphics[width=0.85\textwidth]{image.png}
 \caption{\textbf{Identification of the Thermodynamic Dead Zone in HIV-1 gp41 HR1.} 
 Shannon entropy analysis of n=3,552 HIV-1 gp160 sequences reveals extreme conservation in the HR1 domain. 
 (\textbf{Left}) Position-specific entropy plot comparing HR1 (blue, residues 568-576) vs. V3 loop (red, control region showing high variability). 
 (\textbf{Right}) Distribution comparison. Six consecutive residues (QQLLGIW, positions 3-8) exhibit \textbf{0.000 bits of entropy} (100\% conservation across all analyzed sequences). 
 Mean HR1 entropy: 0.176 bits (95\% CI: $\pm$0.396); Mean V3 entropy: 1.502 bits. 
 Statistical significance: 8.52-fold difference ($p=2.57 \times 10^{-5}$, Mann-Whitney U test), effect size $d=2.53$. 
-This confirms the "Entropic Vise" as a thermodynamically constrained region where mutations are lethal \cite{Gong2013eLife,Wylie2011PNAS,Zeldovich2007PNAS}.}
+This confirms the ``Entropic Vise'' as a thermodynamically constrained region where mutations are lethal \cite{Gong2013eLife,Wylie2011PNAS,Zeldovich2007PNAS}.}
 \label{fig:entropy}
 \end{figure}
 
@@ -284,156 +300,190 @@ EXPERIMENTAL DESIGN:
 
 \textbf{Task 1.1: Entropy Validation and Target Confirmation (Months 1-6)}
 
-Step 1: Comprehensive Sequence Analysis
-- Download complete HIV-1 Env sequences from Los Alamos HIV Database (n>500,000)
-- Filter for complete gp41 sequences (residues 512-684)
-- Calculate position-specific Shannon entropy: H(i) = -Σ p(aa) log₂ p(aa)
-- Identify all regions with H < 0.1 bits (near-zero entropy)
-- Statistical validation: Bootstrap resampling (n=1000) to confirm stability
+\textbf{Step 1: Comprehensive Sequence Analysis}
+\begin{itemize}
+\item Download complete HIV-1 Env sequences from Los Alamos HIV Database (n$>$500,000).
+\item Filter for complete gp41 sequences (residues 512-684).
+\item Calculate position-specific Shannon entropy: $H(i) = -\Sigma \, p(aa) \log_2 p(aa)$.
+\item Identify all regions with $H < 0.1$ bits (near-zero entropy).
+\item Statistical validation: Bootstrap resampling (n=1000) to confirm stability.
+\end{itemize}
 
-Expected outcome: Confirm HR1 region 568-576 has H ≈ 0.0 bits with 95% CI
+Expected outcome: Confirm HR1 region 568-576 has $H \approx 0.0$ bits with 95\% CI.
 
-Step 2: Structural Validation
-- Obtain crystal structures of gp41 six-helix bundle (PDB: 1AIK, 1ENV, 2X7R)
-- Calculate inter-residue contact energies using FoldX force field
-- Perform in silico mutagenesis of each HR1 residue (19 substitutions × 9 positions)
-- Quantify ΔΔG of folding for each mutant
-- Identify residues where ANY substitution yields ΔΔG > +5 kcal/mol
+\textbf{Step 2: Structural Validation}
+\begin{itemize}
+\item Obtain crystal structures of gp41 six-helix bundle (PDB: 1AIK, 1ENV, 2X7R).
+\item Calculate inter-residue contact energies using FoldX force field.
+\item Perform in silico mutagenesis of each HR1 residue (19 substitutions $\times$ 9 positions).
+\item Quantify $\Delta\Delta G$ of folding for each mutant.
+\item Identify residues where ANY substitution yields $\Delta\Delta G > +5$ kcal/mol.
+\end{itemize}
 
-Expected outcome: W571, E575, R579, I587 are energetically immutable
+Expected outcome: W571, E575, R579, I587 are energetically immutable.
 
-Step 3: Evolutionary Constraint Validation
-- Compare HIV-1 HR1 sequence to SIV, HIV-2, and 50 lentiviral orthologs
-- Calculate dN/dS ratio (nonsynonymous/synonymous substitution rate)
-- Regions with dN/dS ≪ 1 are under strong purifying selection
-- Cross-reference with entropy and structural data
+\textbf{Step 3: Evolutionary Constraint Validation}
+\begin{itemize}
+\item Compare HIV-1 HR1 sequence to SIV, HIV-2, and 50 lentiviral orthologs.
+\item Calculate dN/dS ratio (nonsynonymous/synonymous substitution rate).
+\item Regions with dN/dS $\ll$ 1 are under strong purifying selection.
+\item Cross-reference with entropy and structural data.
+\end{itemize}
 
-Expected outcome: HR1 dN/dS < 0.1, confirming multi-level constraint
+Expected outcome: HR1 dN/dS $<$ 0.1, confirming multi-level constraint.
 
 \textbf{Task 1.2: Aptamer Development for HR1 Targeting (Months 4-12)}
 
-Step 1: SELEX (Systematic Evolution of Ligands by Exponential Enrichment)
-- Synthesize random RNA library (10^14 sequences, 40-nucleotide variable region)
-- Target: Synthetic HR1 peptide (residues 565-580) in pre-fusion conformation
-- Incubate library with immobilized HR1 peptide
-- Wash away non-binders with increasing stringency (0.5-2 M NaCl)
-- Elute bound aptamers, reverse transcribe, PCR amplify
-- Repeat 10-15 rounds until convergence (enrichment plateau)
+\textbf{Step 1: SELEX (Systematic Evolution of Ligands by Exponential Enrichment)}
+\begin{itemize}
+\item Synthesize random RNA library ($10^{14}$ sequences, 40-nucleotide variable region).
+\item Target: Synthetic HR1 peptide (residues 565-580) in pre-fusion conformation.
+\item Incubate library with immobilized HR1 peptide.
+\item Wash away non-binders with increasing stringency (0.5-2 M NaCl).
+\item Elute bound aptamers, reverse transcribe, PCR amplify.
+\item Repeat 10-15 rounds until convergence (enrichment plateau).
+\end{itemize}
 
-RNA aptamers have demonstrated potent HIV inhibition in prior studies \cite{Neff2011SciTranslMed,Zhou2008MolTher}.
+RNA aptamers have demonstrated potent HIV inhibition in prior studies \cite{Neff2011SciTranslMed,Zhou2008MolTher,Zhou2013MolTher,Zhou2015ChemBiol}.
 
-Expected outcome: 5-10 high-affinity aptamers (Kd < 10 nM)
+Expected outcome: 5-10 high-affinity aptamers (Kd $<$ 10 nM).
 
-Step 2: Aptamer Characterization
-- Determine binding affinity by surface plasmon resonance (SPR)
-- Test specificity: Ensure no binding to HR2, MPER, or CD4-binding site
-- Determine binding kinetics: kon and koff rates
-- Test conformational specificity: Binding to pre-fusion vs post-fusion gp41
-- Secondary structure prediction (Mfold) and validation (SHAPE-MaP)
+\textbf{Step 2: Aptamer Characterization}
+\begin{itemize}
+\item Determine binding affinity by surface plasmon resonance (SPR) \cite{Lange2017NAR}.
+\item Test specificity: Ensure no binding to HR2, MPER, or CD4-binding site.
+\item Determine binding kinetics: $k_{on}$ and $k_{off}$ rates.
+\item Test conformational specificity: Binding to pre-fusion vs post-fusion gp41.
+\item Secondary structure prediction (Mfold) and validation (SHAPE-MaP).
+\end{itemize}
 
-Expected outcome: Lead aptamer with Kd < 5 nM, >100-fold specificity for HR1
+Expected outcome: Lead aptamer with Kd $<$ 5 nM, $>$100-fold specificity for HR1.
 
-Step 3: Aptamer Optimization
-- Truncation analysis: Remove non-essential nucleotides to minimize size
-- Chemical modifications: 2'-O-methyl, 2'-fluoro substitutions for nuclease resistance
-- Test stability in human serum: Half-life >24 hours required
-- Functional validation: Aptamer inhibits HIV-1 pseudovirus entry (IC50 < 50 nM)
+\textbf{Step 3: Aptamer Optimization}
+\begin{itemize}
+\item Truncation analysis: Remove non-essential nucleotides to minimize size.
+\item Chemical modifications: 2'-O-methyl, 2'-fluoro substitutions for nuclease resistance.
+\item Test stability in human serum: Half-life $>$24 hours required.
+\item Functional validation: Aptamer inhibits HIV-1 pseudovirus entry (IC50 $<$ 50 nM).
+\end{itemize}
 
-Expected outcome: Optimized aptamer (30-40 nt) with in vivo stability
+Expected outcome: Optimized aptamer (30-40 nt) with in vivo stability.
 
 \textbf{Task 1.3: Proteolytic Nanobomb Construction (Months 10-18)}
 
-Step 1: Protease Selection and Engineering
-- Candidate proteases: TEV protease, Tobacco Etch Virus NIa protease, Caspase-3
-- Requirement: High specificity, recognition sequence can be engineered into HR1 flanking region
-- Engineer protease variants with relaxed specificity for gp41 cleavage sites
-- Screen using fluorogenic peptide libraries
-- Select protease with cleavage efficiency >90% at target site
+\textbf{Step 1: Protease Selection and Engineering}
+\begin{itemize}
+\item Candidate proteases: TEV protease, Tobacco Etch Virus NIa protease, Caspase-3.
+\item Requirement: High specificity, recognition sequence can be engineered into HR1 flanking region.
+\item Engineer protease variants with relaxed specificity for gp41 cleavage sites.
+\item Screen using fluorogenic peptide libraries.
+\item Select protease with cleavage efficiency $>$90\% at target site.
+\end{itemize}
 
-Expected outcome: Engineered protease cleaves HR1 region with Kcat/Km > 10^6 M^-1 s^-1
+Expected outcome: Engineered protease cleaves HR1 region with $K_{cat}/K_m > 10^6$ M$^{-1}$s$^{-1}$.
 
-Step 2: Aptamer-Protease Chimera Design
-- Linker design: Flexible (Gly-Ser)n linker to allow independent folding
-- Test linker lengths: 5, 10, 15, 20 amino acids
-- Expression construct: His-tagged for purification, optional cell-penetrating peptide (TAT/Penetratin)
-- Cloning strategy: pET28a vector, E. coli expression
-- Alternative: In vitro transcription/translation for RNA-protein hybrid
+\textbf{Step 2: Aptamer-Protease Chimera Design}
+\begin{itemize}
+\item Linker design: Flexible (Gly-Ser)$_n$ linker to allow independent folding.
+\item Test linker lengths: 5, 10, 15, 20 amino acids.
+\item Expression construct: His-tagged for purification, optional cell-penetrating peptide (TAT/Penetratin).
+\item Cloning strategy: pET28a vector, E. coli expression.
+\item Alternative: In vitro transcription/translation for RNA-protein hybrid.
+\end{itemize}
 
-Expected outcome: Soluble aptamer-protease fusion protein (50-60 kDa)
+Expected outcome: Soluble aptamer-protease fusion protein (50-60 kDa).
 
-Step 3: Functional Validation - In Vitro
-- Target: Recombinant gp41 ectodomain or Env trimers
-- Assay 1: Western blot showing gp41 cleavage upon aptamer-protease treatment
-- Assay 2: ELISA measuring loss of HR1 epitope recognition after proteolysis
-- Assay 3: Six-helix bundle formation assay (disrupted by cleavage)
-- Quantify kinetics: Time course, dose-response (EC50)
+\textbf{Step 3: Functional Validation - In Vitro}
+\begin{itemize}
+\item Target: Recombinant gp41 ectodomain or Env trimers.
+\item Assay 1: Western blot showing gp41 cleavage upon aptamer-protease treatment.
+\item Assay 2: ELISA measuring loss of HR1 epitope recognition after proteolysis.
+\item Assay 3: Six-helix bundle formation assay (disrupted by cleavage).
+\item Quantify kinetics: Time course, dose-response (EC50).
+\end{itemize}
 
-Expected outcome: Complete gp41 inactivation within 30 minutes at nanomolar concentrations
+Expected outcome: Complete gp41 inactivation within 30 minutes at nanomolar concentrations.
 
 \textbf{Task 1.4: Cell-Based and Viral Validation (Months 16-24)}
 
-Step 1: Pseudovirus Neutralization Assay
-- Generate HIV-1 Env pseudotyped viruses (subtypes A, B, C, D)
-- Treat with aptamer-protease chimera (0.1-1000 nM)
-- Infect TZM-bl indicator cells (express β-galactosidase upon infection)
-- Measure IC50 for neutralization
-- Compare to broadly neutralizing antibodies (VRC01, 10E8, PGT121)
+\textbf{Step 1: Pseudovirus Neutralization Assay}
+\begin{itemize}
+\item Generate HIV-1 Env pseudotyped viruses (subtypes A, B, C, D).
+\item Treat with aptamer-protease chimera (0.1-1000 nM).
+\item Infect TZM-bl indicator cells (express $\beta$-galactosidase upon infection).
+\item Measure IC50 for neutralization.
+\item Compare to broadly neutralizing antibodies (VRC01, 10E8, PGT121).
+\end{itemize}
 
-Expected outcome: IC50 < 10 nM across all major subtypes
+Expected outcome: IC50 $<$ 10 nM across all major subtypes.
 
-Step 2: Replication-Competent Virus Assays
-- Treat HIV-1 lab strains (NL4-3, JRCSF) and primary isolates (n=10)
-- Measure viral replication in PBMCs: p24 ELISA on days 3, 7, 14
-- Calculate reduction in viral replication kinetics
-- Test for emergence of resistance: Sequence gp41 from breakthrough viruses
+\textbf{Step 2: Replication-Competent Virus Assays}
+\begin{itemize}
+\item Treat HIV-1 lab strains (NL4-3, JRCSF) and primary isolates (n=10).
+\item Measure viral replication in PBMCs: p24 ELISA on days 3, 7, 14.
+\item Calculate reduction in viral replication kinetics.
+\item Test for emergence of resistance: Sequence gp41 from breakthrough viruses.
+\end{itemize}
 
-Expected outcome: >3 log reduction in p24, zero resistance mutations in HR1
+Expected outcome: $>$3 log reduction in p24, zero resistance mutations in HR1.
 
-Step 3: Cytotoxicity and Specificity Testing
-- Treat uninfected PBMCs, CD4+ T cells, monocytes with aptamer-protease
-- Measure viability (MTT assay), activation markers (flow cytometry)
-- Test for off-target proteolysis: Western blot for host cell surface proteins
-- Measure cytokine release (IL-2, IFN-γ, TNF-α) as inflammation markers
+\textbf{Step 3: Cytotoxicity and Specificity Testing}
+\begin{itemize}
+\item Treat uninfected PBMCs, CD4+ T cells, monocytes with aptamer-protease.
+\item Measure viability (MTT assay), activation markers (flow cytometry).
+\item Test for off-target proteolysis: Western blot for host cell surface proteins.
+\item Measure cytokine release (IL-2, IFN-$\gamma$, TNF-$\alpha$) as inflammation markers.
+\end{itemize}
 
-Expected outcome: No cytotoxicity at 10× therapeutic dose, no off-target effects
+Expected outcome: No cytotoxicity at 10$\times$ therapeutic dose, no off-target effects.
 
 \textbf{Task 1.5: In Vivo Efficacy - Humanized Mouse Model (Months 22-36)}
 
-Step 1: Model Selection and Validation
-- Use BLT (Bone marrow/Liver/Thymus) humanized mice or NSG-hu mice
-- Reconstitute with human CD34+ hematopoietic stem cells
-- Confirm human T cell engraftment: >50% hCD45+ cells in blood
-- Challenge with HIV-1 (10^4 TCID50, i.v. injection)
-- Monitor viral load: Plasma HIV-1 RNA by qRT-PCR weekly
+\textbf{Step 1: Model Selection and Validation}
+\begin{itemize}
+\item Use BLT (Bone marrow/Liver/Thymus) humanized mice or NSG-hu mice.
+\item Reconstitute with human CD34+ hematopoietic stem cells.
+\item Confirm human T cell engraftment: $>$50\% hCD45+ cells in blood.
+\item Challenge with HIV-1 ($10^4$ TCID50, i.v. injection).
+\item Monitor viral load: Plasma HIV-1 RNA by qRT-PCR weekly.
+\end{itemize}
 
-Step 2: Therapeutic Intervention
-- Group 1 (n=10): Aptamer-protease chimera, 10 mg/kg i.v., weekly × 12 weeks
-- Group 2 (n=10): ART (TAF/FTC/DTG), daily oral gavage
-- Group 3 (n=10): Aptamer-protease + ART combination
-- Group 4 (n=10): Vehicle control (PBS)
-- Primary endpoint: Plasma viral load at week 12
-- Secondary endpoints: CD4+ T cell count, proviral DNA in tissues
+\textbf{Step 2: Therapeutic Intervention}
+\begin{itemize}
+\item Group 1 (n=10): Aptamer-protease chimera, 10 mg/kg i.v., weekly $\times$ 12 weeks.
+\item Group 2 (n=10): ART (TAF/FTC/DTG), daily oral gavage.
+\item Group 3 (n=10): Aptamer-protease + ART combination.
+\item Group 4 (n=10): Vehicle control (PBS).
+\item Primary endpoint: Plasma viral load at week 12.
+\item Secondary endpoints: CD4+ T cell count, proviral DNA in tissues.
+\end{itemize}
 
-Step 3: Resistance and Durability Analysis
-- Harvest tissues at week 12: Spleen, lymph nodes, bone marrow, gut
-- Extract proviral DNA and sequence full-length Env
-- Calculate genetic diversity (entropy) and identify any escape mutations
-- Analytical treatment interruption (ATI): Stop all treatment at week 12, monitor rebound
-- Define "functional cure": No viral rebound for >8 weeks post-ATI
+\textbf{Step 3: Resistance and Durability Analysis}
+\begin{itemize}
+\item Harvest tissues at week 12: Spleen, lymph nodes, bone marrow, gut.
+\item Extract proviral DNA and sequence full-length Env.
+\item Calculate genetic diversity (entropy) and identify any escape mutations.
+\item Analytical treatment interruption (ATI): Stop all treatment at week 12, monitor rebound.
+\item Define ``functional cure'': No viral rebound for $>$8 weeks post-ATI.
+\end{itemize}
 
-Expected outcome: Group 3 shows >4 log viral load reduction, minimal/no rebound post-ATI
+Expected outcome: Group 3 shows $>$4 log viral load reduction, minimal/no rebound post-ATI.
 
 \textbf{STATISTICAL ANALYSIS FOR AIM 1:}
-- Power calculation: n=10 per group achieves 80% power to detect 2-log difference (α=0.05)
-- Primary analysis: Repeated measures ANOVA for viral load trajectories
-- Post-hoc: Tukey HSD for pairwise comparisons
-- Survival analysis: Kaplan-Meier curves for time to viral rebound post-ATI
+\begin{itemize}
+\item Power calculation: n=10 per group achieves 80\% power to detect 2-log difference ($\alpha$=0.05).
+\item Primary analysis: Repeated measures ANOVA for viral load trajectories.
+\item Post-hoc: Tukey HSD for pairwise comparisons.
+\item Survival analysis: Kaplan-Meier curves for time to viral rebound post-ATI.
+\end{itemize}
 
 \textbf{DELIVERABLES FOR AIM 1:}
-1. Validated thermodynamic target (HR1 Entropic Vise) with H = 0.0 bits
-2. High-affinity aptamer (Kd < 5 nM) with in vivo stability
-3. Functional aptamer-protease chimera with broad neutralization (all subtypes)
-4. Proof-of-concept in humanized mice: Viral suppression + ATI tolerance
+\begin{enumerate}
+\item Validated thermodynamic target (HR1 Entropic Vise) with $H = 0.0$ bits.
+\item High-affinity aptamer (Kd $<$ 5 nM) with in vivo stability.
+\item Functional aptamer-protease chimera with broad neutralization (all subtypes).
+\item Proof-of-concept in humanized mice: Viral suppression + ATI tolerance.
+\end{enumerate}
 
 
 
@@ -457,190 +507,242 @@ EXPERIMENTAL DESIGN:
 
 \textbf{Task 2.1: Training Data Preparation and Baseline Model (Months 1-8)}
 
-Step 1: Dataset Assembly
-- Download full-length HIV-1 Env sequences from Los Alamos HIV Database
-- Filter criteria: Complete gp160 sequences (1-856 aa), remove lab strains
-- Expected dataset: ~200,000 unique sequences spanning subtypes A-D, CRFs
-- Partition: 80% training, 10% validation, 10% test (temporal split)
-- Temporal validation: Train on sequences pre-2015, test on 2016-2023 sequences
+\textbf{Step 1: Dataset Assembly}
+\begin{itemize}
+\item Download full-length HIV-1 Env sequences from Los Alamos HIV Database.
+\item Filter criteria: Complete gp160 sequences (1-856 aa), remove lab strains.
+\item Expected dataset: $\sim$200,000 unique sequences spanning subtypes A-D, CRFs.
+\item Partition: 80\% training, 10\% validation, 10\% test (temporal split).
+\item Temporal validation: Train on sequences pre-2015, test on 2016-2023 sequences.
+\end{itemize}
 
-Step 2: Sequence Encoding
-- One-hot encoding: 20 amino acids × 856 positions = 17,120-dimensional vectors
-- Alternative: Use ESM-2 protein language model embeddings (1280-dimensional)
-- Normalize encoded sequences: z-score transformation
-- Data augmentation: Add random masking (10% positions) to improve robustness
+\textbf{Step 2: Sequence Encoding}
+\begin{itemize}
+\item One-hot encoding: 20 amino acids $\times$ 856 positions = 17,120-dimensional vectors.
+\item Alternative: Use ESM-2 protein language model embeddings (1280-dimensional).
+\item Normalize encoded sequences: z-score transformation.
+\item Data augmentation: Add random masking (10\% positions) to improve robustness.
+\end{itemize}
 
-Expected outcome: Clean, encoded dataset ready for GAN training
+Expected outcome: Clean, encoded dataset ready for GAN training.
 
-Step 3: Baseline GAN Architecture
-- Generator: 5-layer feedforward network with residual connections
-  - Input: 128-dimensional latent vector (Gaussian noise)
-  - Hidden layers: [512, 1024, 2048, 1024, 17120] neurons
-  - Activation: LeakyReLU (α=0.2), final layer Softmax per position
-  - Output: Probability distribution over amino acids at each position
+\textbf{Step 3: Baseline GAN Architecture}
 
-- Discriminator: 5-layer convolutional network
-  - Input: 20 × 856 one-hot encoded sequence
-  - Conv layers: [64, 128, 256, 512] filters, kernel size 5
-  - Global average pooling → Fully connected [256, 1] → Sigmoid
-  - Output: Probability that sequence is real (not generated)
+\textit{Generator:} 5-layer feedforward network with residual connections
+\begin{itemize}
+\item Input: 128-dimensional latent vector (Gaussian noise).
+\item Hidden layers: [512, 1024, 2048, 1024, 17120] neurons.
+\item Activation: LeakyReLU ($\alpha$=0.2), final layer Softmax per position.
+\item Output: Probability distribution over amino acids at each position.
+\end{itemize}
 
-Step 4: Baseline Training Protocol
-- Loss function: Wasserstein GAN with gradient penalty (WGAN-GP)
-- Optimizer: Adam with learning rate 1×10^-4, β1=0.5, β2=0.9
-- Training: 100,000 iterations, batch size 64
-- Discriminator updates: 5 per generator update (standard WGAN protocol)
-- Monitor: Discriminator loss, generator loss, Fréchet Inception Distance (FID)
+\textit{Discriminator:} 5-layer convolutional network
+\begin{itemize}
+\item Input: 20 $\times$ 856 one-hot encoded sequence.
+\item Conv layers: [64, 128, 256, 512] filters, kernel size 5.
+\item Global average pooling $\rightarrow$ Fully connected [256, 1] $\rightarrow$ Sigmoid.
+\item Output: Probability that sequence is real (not generated).
+\end{itemize}
+
+\textbf{Step 4: Baseline Training Protocol}
+\begin{itemize}
+\item Loss function: Wasserstein GAN with gradient penalty (WGAN-GP).
+\item Optimizer: Adam with learning rate $1\times10^{-4}$, $\beta_1$=0.5, $\beta_2$=0.9.
+\item Training: 100,000 iterations, batch size 64.
+\item Discriminator updates: 5 per generator update (standard WGAN protocol).
+\item Monitor: Discriminator loss, generator loss, Fr\'{e}chet Inception Distance (FID).
+\end{itemize}
 
 Expected outcome: GAN generates realistic Env sequences indistinguishable from 
-natural sequences (discriminator accuracy ≈50% on test set)
+natural sequences (discriminator accuracy $\approx$50\% on test set).
 
 \textbf{Task 2.2: Thermodynamic Constraint Implementation (Months 6-14)}
 
-Step 1: Entropy Penalty Design
-- Calculate position-specific Shannon entropy H(i) for all 856 positions
-- Identify "frozen" positions: H(i) < 0.1 bits (near-zero variation)
-- Expected frozen positions: HR1 (568-576), MPER (662-683), fusion peptide (512-527)
-- Define entropy penalty term:
+\textbf{Step 1: Entropy Penalty Design}
+\begin{itemize}
+\item Calculate position-specific Shannon entropy $H(i)$ for all 856 positions.
+\item Identify ``frozen'' positions: $H(i) < 0.1$ bits (near-zero variation).
+\item Expected frozen positions: HR1 (568-576), MPER (662-683), fusion peptide (512-527).
+\item Define entropy penalty term:
+\end{itemize}
 
-  L_entropy = Σ [H_generated(i) - H_observed(i)]² for frozen positions
+\begin{center}
+$L_{entropy} = \Sigma [H_{generated}(i) - H_{observed}(i)]^2$ for frozen positions
+\end{center}
 
-  Where H_generated(i) is entropy at position i in generated sequences
+\textbf{Step 2: Structural Constraint Integration}
+\begin{itemize}
+\item Use AlphaFold2 to predict structures of generated sequences.
+\item Calculate pLDDT (predicted local distance difference test) scores.
+\item Reject sequences with pLDDT $<$ 70 (unreliable structure prediction).
+\item Additional constraint: Six-helix bundle must be stable ($\Delta G < -20$ kcal/mol).
+\item Use FoldX to calculate $\Delta\Delta G$ for HR1-HR2 interaction in generated variants.
+\end{itemize}
 
-Step 2: Structural Constraint Integration
-- Use AlphaFold2 to predict structures of generated sequences
-- Calculate pLDDT (predicted local distance difference test) scores
-- Reject sequences with pLDDT < 70 (unreliable structure prediction)
-- Additional constraint: Six-helix bundle must be stable (ΔG < -20 kcal/mol)
-- Use FoldX to calculate ΔΔG for HR1-HR2 interaction in generated variants
+\textbf{Step 3: Fitness Constraint (Viability Filter)}
+\begin{itemize}
+\item Train auxiliary classifier on natural sequences labeled by:
+  \begin{itemize}
+  \item Growth rate (if available from clinical data).
+  \item Geographic spread (proxy for fitness).
+  \item Viral load data (higher = more fit).
+  \end{itemize}
+\item Fitness predictor: Random Forest with 100 trees.
+\item Features: Sequence embedding + structural features + entropy profile.
+\item Reject generated sequences predicted to be non-viable (fitness $<$ 0.5).
+\end{itemize}
 
-Step 3: Fitness Constraint (Viability Filter)
-- Train auxiliary classifier on natural sequences labeled by:
-  - Growth rate (if available from clinical data)
-  - Geographic spread (proxy for fitness)
-  - Viral load data (higher = more fit)
-- Fitness predictor: Random Forest with 100 trees
-- Features: Sequence embedding + structural features + entropy profile
-- Reject generated sequences predicted to be non-viable (fitness < 0.5)
+\textbf{Step 4: Modified Loss Function (TC-GAN)}
+\begin{itemize}
+\item Combined loss:
+\end{itemize}
 
-Step 4: Modified Loss Function (TC-GAN)
-- Combined loss:
+\begin{center}
+$L_{total} = L_{WGAN} + \lambda_1 \cdot L_{entropy} + \lambda_2 \cdot L_{structure} + \lambda_3 \cdot L_{fitness}$
+\end{center}
 
-  L_total = L_WGAN + λ1·L_entropy + λ2·L_structure + λ3·L_fitness
-
-  Where:
-  - L_WGAN = Standard Wasserstein loss
-  - L_entropy = Entropy deviation penalty (λ1 = 10.0)
-  - L_structure = Structural instability penalty (λ1 = 5.0)
-  - L_fitness = Viability penalty (λ3 = 2.0)
-
-- Hyperparameter tuning: Grid search over λ values
+Where:
+\begin{itemize}
+\item $L_{WGAN}$ = Standard Wasserstein loss.
+\item $L_{entropy}$ = Entropy deviation penalty ($\lambda_1 = 10.0$).
+\item $L_{structure}$ = Structural instability penalty ($\lambda_2 = 5.0$).
+\item $L_{fitness}$ = Viability penalty ($\lambda_3 = 2.0$).
+\item Hyperparameter tuning: Grid search over $\lambda$ values.
+\end{itemize}
 
 Expected outcome: TC-GAN generates diverse sequences while preserving 
-thermodynamically constrained regions (H = 0.0 in HR1/MPER)
+thermodynamically constrained regions ($H = 0.0$ in HR1/MPER).
 
 \textbf{Task 2.3: Variant Library Generation and Validation (Months 12-20)}
 
-Step 1: Prospective Variant Generation
-- Generate 50,000 synthetic Env sequences using trained TC-GAN
-- Filter for uniqueness: Remove sequences >98% identical to known strains
-- Cluster using UMAP dimensionality reduction + HDBSCAN clustering
-- Select representative sequences: 10,000 variants spanning sequence space
+\textbf{Step 1: Prospective Variant Generation}
+\begin{itemize}
+\item Generate 50,000 synthetic Env sequences using trained TC-GAN.
+\item Filter for uniqueness: Remove sequences $>$98\% identical to known strains.
+\item Cluster using UMAP dimensionality reduction + HDBSCAN clustering.
+\item Select representative sequences: 10,000 variants spanning sequence space.
+\end{itemize}
 
-Step 2: Retrospective Validation (Time-Travel Test)
-- Train TC-GAN on pre-2015 sequences only
-- Generate 10,000 variants
-- Compare to actual sequences observed 2016-2023
-- Metrics:
-  - Coverage: % of observed variants within 5% sequence identity of predicted
-  - Precision: % of predicted variants that later emerged
-  - Novelty: % of predicted variants not yet observed (potential future threats)
+\textbf{Step 2: Retrospective Validation (Time-Travel Test)}
+\begin{itemize}
+\item Train TC-GAN on pre-2015 sequences only.
+\item Generate 10,000 variants.
+\item Compare to actual sequences observed 2016-2023.
+\item Metrics:
+  \begin{itemize}
+  \item Coverage: \% of observed variants within 5\% sequence identity of predicted.
+  \item Precision: \% of predicted variants that later emerged.
+  \item Novelty: \% of predicted variants not yet observed (potential future threats).
+  \end{itemize}
+\end{itemize}
 
-Expected outcome: >85% coverage of observed variants, demonstrating predictive power
+Expected outcome: $>$85\% coverage of observed variants, demonstrating predictive power.
 
-Step 3: Phylogenetic Validation
-- Build maximum likelihood phylogenetic tree (RAxML) with:
-  - Known sequences (n=10,000 representative natural variants)
-  - Generated sequences (n=10,000 TC-GAN variants)
-- Calculate phylogenetic distance between generated and natural clades
-- Validate that generated sequences occupy same tree space as natural variants
-- Test for unrealistic recombination patterns (breakpoint analysis)
+\textbf{Step 3: Phylogenetic Validation}
+\begin{itemize}
+\item Build maximum likelihood phylogenetic tree (RAxML) with:
+  \begin{itemize}
+  \item Known sequences (n=10,000 representative natural variants).
+  \item Generated sequences (n=10,000 TC-GAN variants).
+  \end{itemize}
+\item Calculate phylogenetic distance between generated and natural clades.
+\item Validate that generated sequences occupy same tree space as natural variants.
+\item Test for unrealistic recombination patterns (breakpoint analysis).
+\end{itemize}
 
-Expected outcome: Generated variants cluster within natural phylogenetic diversity
+Expected outcome: Generated variants cluster within natural phylogenetic diversity.
 
-Step 4: Functional Validation - Key Epitopes
-- Synthesize peptides for 100 selected TC-GAN variants (HR1, V3, CD4bs regions)
-- Test binding to broadly neutralizing antibodies (bNAbs):
-  - VRC01 (CD4-binding site)
-  - 10E8 (MPER)
-  - PGT121 (V3 glycan)
-- Measure binding affinity by SPR (Kd determination)
-- Identify "predictable escapes": Variants that evade current bNAbs
+\textbf{Step 4: Functional Validation - Key Epitopes}
+\begin{itemize}
+\item Synthesize peptides for 100 selected TC-GAN variants (HR1, V3, CD4bs regions).
+\item Test binding to broadly neutralizing antibodies (bNAbs):
+  \begin{itemize}
+  \item VRC01 (CD4-binding site).
+  \item 10E8 (MPER).
+  \item PGT121 (V3 glycan).
+  \end{itemize}
+\item Measure binding affinity by SPR (Kd determination).
+\item Identify ``predictable escapes'': Variants that evade current bNAbs.
+\end{itemize}
 
-Expected outcome: Identify 10-20 high-priority escape variants for vaccine inclusion
+Expected outcome: Identify 10-20 high-priority escape variants for vaccine inclusion.
 
 \textbf{Task 2.4: Adversarial Vaccine Design (Months 18-28)}
 
-Step 1: Epitope-Based Vaccine Strategy
-- Select top 50 TC-GAN variants representing maximal antigenic diversity
-- Design mosaic immunogens: Combine epitopes from multiple variants
-- Optimization: Maximize coverage of predicted variants while minimizing
-  redundancy (set cover problem, solved via greedy algorithm)
-- Synthesize mosaic gp140 trimers (5-10 unique constructs)
+\textbf{Step 1: Epitope-Based Vaccine Strategy}
+\begin{itemize}
+\item Select top 50 TC-GAN variants representing maximal antigenic diversity.
+\item Design mosaic immunogens: Combine epitopes from multiple variants.
+\item Optimization: Maximize coverage of predicted variants while minimizing redundancy (set cover problem, solved via greedy algorithm).
+\item Synthesize mosaic gp140 trimers (5-10 unique constructs).
+\end{itemize}
 
-Step 2: Immunogenicity Testing - In Vitro
-- Immunize rabbits (n=5 per construct) with mosaic gp140 + adjuvant
-- Boost at weeks 4, 12, 20
-- Collect sera at weeks 2, 6, 14, 22
-- Test neutralization breadth against:
-  - Standard WHO panel (12 reference strains)
-  - TC-GAN predicted variants (50 synthetic pseudoviruses)
-  - Naturally emerging strains from 2023-2024 (prospective validation)
+\textbf{Step 2: Immunogenicity Testing - In Vitro}
+\begin{itemize}
+\item Immunize rabbits (n=5 per construct) with mosaic gp140 + adjuvant.
+\item Boost at weeks 4, 12, 20.
+\item Collect sera at weeks 2, 6, 14, 22.
+\item Test neutralization breadth against:
+  \begin{itemize}
+  \item Standard WHO panel (12 reference strains).
+  \item TC-GAN predicted variants (50 synthetic pseudoviruses).
+  \item Naturally emerging strains from 2023-2024 (prospective validation).
+  \end{itemize}
+\end{itemize}
 
-Expected outcome: 50% neutralization breadth against predicted variants vs 
-20% for conventional vaccines
+Expected outcome: 50\% neutralization breadth against predicted variants vs 
+20\% for conventional vaccines.
 
-Step 3: T Cell Response Mapping
-- Synthesize overlapping peptide pools covering mosaic immunogens
-- Stimulate PBMCs from immunized animals
-- Measure T cell responses: IFN-γ ELISpot, intracellular cytokine staining
-- Map epitopes recognized by CD4+ and CD8+ T cells
-- Compare to epitope coverage of natural infection
+\textbf{Step 3: T Cell Response Mapping}
+\begin{itemize}
+\item Synthesize overlapping peptide pools covering mosaic immunogens.
+\item Stimulate PBMCs from immunized animals.
+\item Measure T cell responses: IFN-$\gamma$ ELISpot, intracellular cytokine staining.
+\item Map epitopes recognized by CD4+ and CD8+ T cells.
+\item Compare to epitope coverage of natural infection.
+\end{itemize}
 
-Expected outcome: Broad T cell responses covering conserved epitopes
+Expected outcome: Broad T cell responses covering conserved epitopes.
 
 \textbf{Task 2.5: Real-Time Surveillance Dashboard (Months 24-36)}
 
-Step 1: Integration with Sequence Databases
-- Establish automated pipeline pulling weekly updates from GISAID, Los Alamos
-- Re-train TC-GAN quarterly with latest sequences (continual learning)
-- Flag emerging variants that match TC-GAN predictions (early warning system)
+\textbf{Step 1: Integration with Sequence Databases}
+\begin{itemize}
+\item Establish automated pipeline pulling weekly updates from GISAID, Los Alamos.
+\item Re-train TC-GAN quarterly with latest sequences (continual learning).
+\item Flag emerging variants that match TC-GAN predictions (early warning system).
+\end{itemize}
 
-Step 2: "Escape Probability" Scoring System
-- For each generated variant, calculate escape probability score:
+\textbf{Step 2: ``Escape Probability'' Scoring System}
+\begin{itemize}
+\item For each generated variant, calculate escape probability score:
+\end{itemize}
 
-  P_escape = f(fitness, antigenic distance, entropy deviation)
+\begin{center}
+$P_{escape} = f(\text{fitness}, \text{antigenic distance}, \text{entropy deviation})$
+\end{center}
 
-- Rank variants by threat level: High (P>0.7), Medium (0.4-0.7), Low (<0.4)
-- Provide public dashboard (similar to CoVariants.org for SARS-CoV-2)
+\begin{itemize}
+\item Rank variants by threat level: High ($P>0.7$), Medium (0.4-0.7), Low ($<0.4$).
+\item Provide public dashboard (similar to CoVariants.org for SARS-CoV-2).
 
-Expected outcome: Functional surveillance tool for HIV vaccine developers
+\end{itemize}
 
 \textbf{STATISTICAL ANALYSIS FOR AIM 2:}
-- Model performance: Calculate FID (Fréchet Inception Distance) between 
-  generated and real sequence distributions
-- Predictive accuracy: ROC curve for retrospective prediction of 2016-2023 variants
-- Neutralization breadth: Compare geometric mean IC50 across variant panels 
-  (paired t-test, mosaic vs conventional vaccine)
-- Power: n=5 animals per group achieves 80% power to detect 2-fold difference 
-  in IC50 (α=0.05)
+\begin{itemize}
+\item Model performance: Calculate FID (Fr\'{e}chet Inception Distance) between generated and real sequence distributions.
+\item Predictive accuracy: ROC curve for retrospective prediction of 2016-2023 variants.
+\item Neutralization breadth: Compare geometric mean IC50 across variant panels (paired t-test, mosaic vs conventional vaccine).
+\item Power: n=5 animals per group achieves 80\% power to detect 2-fold difference in IC50 ($\alpha$=0.05).
+\end{itemize}
 
 \textbf{DELIVERABLES FOR AIM 2:}
-1. Trained TC-GAN model with entropy/structure/fitness constraints
-2. Library of 10,000 predicted "future variants" with validation data
-3. Proof-of-concept mosaic vaccine with enhanced breadth
-4. Public surveillance dashboard for HIV escape prediction
-
+\begin{enumerate}
+\item Trained TC-GAN model with entropy/structure/fitness constraints.
+\item Library of 10,000 predicted ``future variants'' with validation data.
+\item Proof-of-concept mosaic vaccine with enhanced breadth.
+\item Public surveillance dashboard for HIV escape prediction.
+\end{enumerate}
 
 
 
@@ -651,162 +753,191 @@ AIM 3: SENTINEL CELLS - ZERO-TRUST BIO-FORENSICS
 RATIONALE:
 Current HIV latency assays (QVOA, PCR-based proviral DNA quantification) are 
 passive and underestimate the true reservoir size by 60-fold. We propose an 
-active surveillance system inspired by cybersecurity "honeytokens": engineered 
+active surveillance system inspired by cybersecurity ``honeytokens'': engineered 
 cells that report viral reactivation in real-time.
 
 HYPOTHESIS:
-Autologous CD4+ T cells engineered with Tat-responsive reporters ("Sentinel 
-Cells") can detect single reactivation events in vivo, providing quantitative 
+Autologous CD4+ T cells engineered with Tat-responsive reporters (``Sentinel 
+Cells'') can detect single reactivation events in vivo, providing quantitative 
 proof of viral eradication versus mere suppression.
 
 EXPERIMENTAL DESIGN:
 
 \textbf{Task 3.1: Reporter Construct Design and Validation (Months 1-8)}
 
-Step 1: Tat-Responsive Reporter Vector Construction
-- Design 1: HIV-1 LTR promoter → Gaussia luciferase (GLuc, secreted)
-- Design 2: Minimal Tat-responsive element (TAR) × 5 repeats → NanoLuc
-- Design 3: Dual reporter: GLuc (immediate readout) + mCherry (cell tracking)
-- Cloning strategy: Lentiviral vector backbone (pLenti-CMV) for stable integration
-- Control constructs: Constitutive promoter (CMV-GLuc), no-Tat control
+\textbf{Step 1: Tat-Responsive Reporter Vector Construction}
+\begin{itemize}
+\item Design 1: HIV-1 LTR promoter $\rightarrow$ Gaussia luciferase (GLuc, secreted).
+\item Design 2: Minimal Tat-responsive element (TAR) $\times$ 5 repeats $\rightarrow$ NanoLuc.
+\item Design 3: Dual reporter: GLuc (immediate readout) + mCherry (cell tracking).
+\item Cloning strategy: Lentiviral vector backbone (pLenti-CMV) for stable integration.
+\item Control constructs: Constitutive promoter (CMV-GLuc), no-Tat control.
+\end{itemize}
 
-Expected outcome: 3 candidate reporter constructs with >100-fold Tat induction
+Expected outcome: 3 candidate reporter constructs with $>$100-fold Tat induction.
 
-Step 2: In Vitro Sensitivity Testing
-- Transfect 293T cells with reporter constructs
-- Co-transfect with Tat expression plasmid (titration: 0.1-1000 ng)
-- Measure luminescence at 24, 48, 72 hours post-transfection
-- Calculate limit of detection (LOD): Minimum Tat concentration for signal
-- Compare to commercial Tat ELISA sensitivity
+\textbf{Step 2: In Vitro Sensitivity Testing}
+\begin{itemize}
+\item Transfect 293T cells with reporter constructs.
+\item Co-transfect with Tat expression plasmid (titration: 0.1-1000 ng).
+\item Measure luminescence at 24, 48, 72 hours post-transfection.
+\item Calculate limit of detection (LOD): Minimum Tat concentration for signal.
+\item Compare to commercial Tat ELISA sensitivity.
+\end{itemize}
 
-Expected outcome: LOD < 10 pg/mL Tat (100-fold more sensitive than ELISA)
+Expected outcome: LOD $<$ 10 pg/mL Tat (100-fold more sensitive than ELISA).
 
-Step 3: Specificity Testing
-- Test reporter activation by:
-  - HIV-1 Tat (positive control)
-  - HIV-2 Tat (cross-reactivity test)
-  - Cellular transcription factors (NF-κB, NFAT, AP-1)
-  - Pro-inflammatory cytokines (TNF-α, IL-2, IFN-γ)
-- Measure false positive rate: % activation without HIV Tat
+\textbf{Step 3: Specificity Testing}
+\begin{itemize}
+\item Test reporter activation by:
+  \begin{itemize}
+  \item HIV-1 Tat (positive control).
+  \item HIV-2 Tat (cross-reactivity test).
+  \item Cellular transcription factors (NF-$\kappa$B, NFAT, AP-1).
+  \item Pro-inflammatory cytokines (TNF-$\alpha$, IL-2, IFN-$\gamma$).
+  \end{itemize}
+\item Measure false positive rate: \% activation without HIV Tat.
+\end{itemize}
 
-Expected outcome: >95% specificity for HIV-1 Tat, <5% false positives
+Expected outcome: $>$95\% specificity for HIV-1 Tat, $<$5\% false positives.
 
 \textbf{Task 3.2: Sentinel Cell Engineering (Months 6-14)}
 
-Step 1: Primary CD4+ T Cell Transduction
-- Isolate CD4+ T cells from healthy donor PBMCs (magnetic bead separation)
-- Activate with anti-CD3/CD28 beads + IL-2 (100 U/mL) for 48 hours
-- Transduce with lentiviral reporter vectors (MOI 5-10)
-- Selection: Puromycin resistance or FACS sorting for mCherry+ cells
-- Expansion: Culture for 7-10 days to achieve >10^7 Sentinel Cells
+\textbf{Step 1: Primary CD4+ T Cell Transduction}
+\begin{itemize}
+\item Isolate CD4+ T cells from healthy donor PBMCs (magnetic bead separation).
+\item Activate with anti-CD3/CD28 beads + IL-2 (100 U/mL) for 48 hours.
+\item Transduce with lentiviral reporter vectors (MOI 5-10).
+\item Selection: Puromycin resistance or FACS sorting for mCherry+ cells.
+\item Expansion: Culture for 7-10 days to achieve $>10^7$ Sentinel Cells.
+\end{itemize}
 
-Expected outcome: >70% transduction efficiency, stable reporter expression
+Expected outcome: $>$70\% transduction efficiency, stable reporter expression.
 
-Step 2: Phenotypic Characterization
-- Flow cytometry panel: CD4, CD25, CD45RA, CCR7, CD69, PD-1, LAG-3
-- Assess memory subset distribution: Naive, central memory, effector memory
-- Measure activation status: CD25, CD69, HLA-DR expression
-- Compare to non-transduced CD4+ T cells (ensure minimal perturbation)
+\textbf{Step 2: Phenotypic Characterization}
+\begin{itemize}
+\item Flow cytometry panel: CD4, CD25, CD45RA, CCR7, CD69, PD-1, LAG-3.
+\item Assess memory subset distribution: Naive, central memory, effector memory.
+\item Measure activation status: CD25, CD69, HLA-DR expression.
+\item Compare to non-transduced CD4+ T cells (ensure minimal perturbation).
+\end{itemize}
 
-Expected outcome: Sentinel Cells retain normal CD4+ T cell phenotype
+Expected outcome: Sentinel Cells retain normal CD4+ T cell phenotype.
 
-Step 3: Functional Validation - HIV Challenge
-- Infect Sentinel Cells with HIV-1 lab strains (NL4-3, JRCSF) at MOI 0.01
-- Measure luminescence kinetics: Days 1, 3, 5, 7, 10 post-infection
-- Compare to p24 ELISA (standard viral replication assay)
-- Calculate correlation: Luminescence vs viral load
-- Test dynamic range: LOD to saturation (10^1 - 10^6 infectious units)
+\textbf{Step 3: Functional Validation - HIV Challenge}
+\begin{itemize}
+\item Infect Sentinel Cells with HIV-1 lab strains (NL4-3, JRCSF) at MOI 0.01.
+\item Measure luminescence kinetics: Days 1, 3, 5, 7, 10 post-infection.
+\item Compare to p24 ELISA (standard viral replication assay).
+\item Calculate correlation: Luminescence vs viral load.
+\item Test dynamic range: LOD to saturation ($10^1$ - $10^6$ infectious units).
+\end{itemize}
 
-Expected outcome: Luminescence correlates with p24 (R² > 0.95), LOD = 10 IU/mL
+Expected outcome: Luminescence correlates with p24 ($R^2 > 0.95$), LOD = 10 IU/mL.
 
 \textbf{Task 3.3: In Vivo Deployment - Humanized Mouse Model (Months 12-24)}
 
-Step 1: Humanized Mouse Preparation
-- Use NSG-hu mice reconstituted with human CD34+ HSCs
-- Confirm human immune cell engraftment: >50% hCD45+ cells
-- Establish chronic HIV-1 infection: 10^4 TCID50 i.v., monitor for 8 weeks
-- Initiate ART (TAF/FTC/DTG) at week 8, suppress viral load to undetectable
+\textbf{Step 1: Humanized Mouse Preparation}
+\begin{itemize}
+\item Use NSG-hu mice reconstituted with human CD34+ HSCs.
+\item Confirm human immune cell engraftment: $>$50\% hCD45+ cells.
+\item Establish chronic HIV-1 infection: $10^4$ TCID50 i.v., monitor for 8 weeks.
+\item Initiate ART (TAF/FTC/DTG) at week 8, suppress viral load to undetectable.
+\end{itemize}
 
-Expected outcome: Stable HIV infection with virologic suppression on ART
+Expected outcome: Stable HIV infection with virologic suppression on ART.
 
-Step 2: Sentinel Cell Infusion
-- Engineer autologous Sentinel Cells from same donor HSCs used for humanization
-- Infuse 10^6 Sentinel Cells i.v. into ART-suppressed mice
-- Track cell persistence: Weekly blood draws, flow cytometry for mCherry+ cells
-- Monitor luminescence: Noninvasive imaging (IVIS) weekly for 12 weeks
+\textbf{Step 2: Sentinel Cell Infusion}
+\begin{itemize}
+\item Engineer autologous Sentinel Cells from same donor HSCs used for humanization.
+\item Infuse $10^6$ Sentinel Cells i.v. into ART-suppressed mice.
+\item Track cell persistence: Weekly blood draws, flow cytometry for mCherry+ cells.
+\item Monitor luminescence: Noninvasive imaging (IVIS) weekly for 12 weeks.
+\end{itemize}
 
-Expected outcome: Sentinel Cells persist >8 weeks, detectable by bioluminescence
+Expected outcome: Sentinel Cells persist $>$8 weeks, detectable by bioluminescence.
 
-Step 3: Analytical Treatment Interruption (ATI) with Real-Time Monitoring
-- Group 1 (n=10): ART cessation at week 12 (standard ATI)
-- Group 2 (n=10): ART + Aim 1 aptamer-protease (test "functional cure")
-- Group 3 (n=10): Continuous ART (negative control, no reactivation)
-- Group 4 (n=10): ART + latency reversal agent (LRA: vorinostat, positive control)
-- Monitoring: IVIS luminescence imaging (daily), plasma viral load (weekly)
-- Primary endpoint: Time to luminescence detection vs time to viral rebound (>50 copies/mL)
+\textbf{Step 3: Analytical Treatment Interruption (ATI) with Real-Time Monitoring}
+\begin{itemize}
+\item Group 1 (n=10): ART cessation at week 12 (standard ATI).
+\item Group 2 (n=10): ART + Aim 1 aptamer-protease (test ``functional cure'').
+\item Group 3 (n=10): Continuous ART (negative control, no reactivation).
+\item Group 4 (n=10): ART + latency reversal agent (LRA: vorinostat, positive control).
+\item Monitoring: IVIS luminescence imaging (daily), plasma viral load (weekly).
+\item Primary endpoint: Time to luminescence detection vs time to viral rebound ($>$50 copies/mL).
+\end{itemize}
 
 Expected outcome: Sentinel Cells detect reactivation 7-14 days earlier than 
-plasma viral load assay
+plasma viral load assay.
 
-Step 4: Post-Mortem Reservoir Quantification
-- Harvest tissues at week 24: Spleen, lymph nodes, bone marrow, gut
-- Quantify proviral DNA: ddPCR for integrated HIV DNA
-- Quantify replication-competent virus: QVOA on tissue-derived CD4+ T cells
-- Locate Sentinel Cells: Immunofluorescence for mCherry in tissue sections
-- Compare reservoir size: Luminescence+ vs luminescence- animals
+\textbf{Step 4: Post-Mortem Reservoir Quantification}
+\begin{itemize}
+\item Harvest tissues at week 24: Spleen, lymph nodes, bone marrow, gut.
+\item Quantify proviral DNA: ddPCR for integrated HIV DNA.
+\item Quantify replication-competent virus: QVOA on tissue-derived CD4+ T cells.
+\item Locate Sentinel Cells: Immunofluorescence for mCherry in tissue sections.
+\item Compare reservoir size: Luminescence+ vs luminescence- animals.
+\end{itemize}
 
-Expected outcome: Luminescence signal correlates with QVOA (R² > 0.8), 
-demonstrates functional reservoir detection
+Expected outcome: Luminescence signal correlates with QVOA ($R^2 > 0.8$), 
+demonstrates functional reservoir detection.
 
 \textbf{Task 3.4: Clinical Translation Feasibility (Months 20-36)}
 
-Step 1: GMP-Grade Vector Production
-- Produce clinical-grade lentiviral vectors under GMP conditions
-- Testing: Replication-competent lentivirus (RCL) assay, endotoxin, sterility
-- Stability testing: 6-month stability at -80°C
-- Regulatory documentation: IND-enabling studies for FDA submission
+\textbf{Step 1: GMP-Grade Vector Production}
+\begin{itemize}
+\item Produce clinical-grade lentiviral vectors under GMP conditions.
+\item Testing: Replication-competent lentivirus (RCL) assay, endotoxin, sterility.
+\item Stability testing: 6-month stability at -80$^\circ$C.
+\item Regulatory documentation: IND-enabling studies for FDA submission.
+\end{itemize}
 
-Expected outcome: GMP-grade vector lot suitable for Phase I trial
+Expected outcome: GMP-grade vector lot suitable for Phase I trial.
 
-Step 2: Safety Assessment - Non-Human Primates
-- Engineer autologous rhesus macaque CD4+ T cells with Sentinel Cell reporters
-- Infuse into healthy macaques (n=6), monitor for 6 months
-- Safety endpoints: Complete blood count, liver/kidney function, cytokine levels
-- Biodistribution: PET-CT imaging of Sentinel Cells
-- Tumorigenicity: Histopathology of all organs at 6 months
+\textbf{Step 2: Safety Assessment - Non-Human Primates}
+\begin{itemize}
+\item Engineer autologous rhesus macaque CD4+ T cells with Sentinel Cell reporters.
+\item Infuse into healthy macaques (n=6), monitor for 6 months.
+\item Safety endpoints: Complete blood count, liver/kidney function, cytokine levels.
+\item Biodistribution: PET-CT imaging of Sentinel Cells.
+\item Tumorigenicity: Histopathology of all organs at 6 months.
+\end{itemize}
 
-Expected outcome: No adverse events, stable cell persistence without pathology
+Expected outcome: No adverse events, stable cell persistence without pathology.
 
-Step 3: Clinical Trial Design (IND Application Preparation)
-- Phase I trial design: Open-label, dose-escalation study
-- Population: HIV+ individuals on suppressive ART (>2 years undetectable VL)
-- Intervention: Autologous Sentinel Cell infusion (10^6, 10^7, 10^8 cells)
-- Primary outcome: Safety (Grade 3-4 adverse events within 28 days)
-- Secondary outcome: Cell persistence (flow cytometry), functional detection 
-  during ATI
-- Exploratory outcome: Correlation with reservoir size (tissue biopsies)
+\textbf{Step 3: Clinical Trial Design (IND Application Preparation)}
+\begin{itemize}
+\item Phase I trial design: Open-label, dose-escalation study.
+\item Population: HIV+ individuals on suppressive ART ($>$2 years undetectable VL).
+\item Intervention: Autologous Sentinel Cell infusion ($10^6$, $10^7$, $10^8$ cells).
+\item Primary outcome: Safety (Grade 3-4 adverse events within 28 days).
+\item Secondary outcome: Cell persistence (flow cytometry), functional detection during ATI.
+\item Exploratory outcome: Correlation with reservoir size (tissue biopsies).
+\end{itemize}
 
-Expected outcome: Complete IND package ready for FDA submission
+Expected outcome: Complete IND package ready for FDA submission.
 
 \textbf{STATISTICAL ANALYSIS FOR AIM 3:}
-- Sensitivity analysis: ROC curve for luminescence vs viral rebound (ATI data)
-- Calculate sensitivity, specificity, PPV, NPV for reactivation detection
-- Survival analysis: Time to detection (luminescence vs PCR) - paired log-rank test
-- Correlation analysis: Spearman's ρ for luminescence vs QVOA/ddPCR
-- Power: n=10 per group achieves 80% power to detect 1-week difference in 
-  detection time (α=0.05)
+\begin{itemize}
+\item Sensitivity analysis: ROC curve for luminescence vs viral rebound (ATI data).
+\item Calculate sensitivity, specificity, PPV, NPV for reactivation detection.
+\item Survival analysis: Time to detection (luminescence vs PCR) - paired log-rank test.
+\item Correlation analysis: Spearman's $\rho$ for luminescence vs QVOA/ddPCR.
+\item Power: n=10 per group achieves 80\% power to detect 1-week difference in detection time ($\alpha$=0.05).
+\end{itemize}
 
 \textbf{DELIVERABLES FOR AIM 3:}
-1. Validated Tat-responsive reporter with <10 pg/mL sensitivity
-2. Proof-of-concept in humanized mice: Real-time reactivation detection
-3. GMP-grade vector production and NHP safety data
-4. IND-ready clinical trial protocol for Phase I study
+\begin{enumerate}
+\item Validated Tat-responsive reporter with $<$10 pg/mL sensitivity.
+\item Proof-of-concept in humanized mice: Real-time reactivation detection.
+\item GMP-grade vector production and NHP safety data.
+\item IND-ready clinical trial protocol for Phase I study.
+\end{enumerate}
 
 
 
 
-
-\section{POTENTIAL PITFALLS \& ALTERNATIVE STRATEGIES} & ALTERNATIVE STRATEGIES (AIM 2: TC-GAN)
+\section{POTENTIAL PITFALLS AND ALTERNATIVE STRATEGIES}
 
 
 \subsection{C.1 PITFALL: GAN TRAINING INSTABILITY}
@@ -817,34 +948,44 @@ multiple constraint terms (entropy, structure, fitness) may exacerbate these
 issues.
 
 \textbf{Evidence of Risk:}
-- Standard GANs fail to converge in 20-30% of training runs
-- Multi-objective optimization can lead to competing gradients
-- Protein sequence space is discrete, challenging for continuous optimization
+\begin{itemize}
+\item Standard GANs fail to converge in 20-30\% of training runs.
+\item Multi-objective optimization can lead to competing gradients.
+\item Protein sequence space is discrete, challenging for continuous optimization.
+\end{itemize}
 
 \textbf{Alternative Strategy 1: Progressive Training}
-- Phase 1: Train baseline WGAN-GP until convergence (no constraints)
-- Phase 2: Gradually introduce entropy penalties (λ1: 0.1 → 10.0 over 10,000 iterations)
-- Phase 3: Add structural constraints (λ2: 0.1 → 5.0)
-- Phase 4: Include fitness penalties (λ3: 0.1 → 2.0)
-- Rationale: Sequential constraint introduction prevents competing objectives
+\begin{itemize}
+\item Phase 1: Train baseline WGAN-GP until convergence (no constraints).
+\item Phase 2: Gradually introduce entropy penalties ($\lambda_1$: 0.1 $\rightarrow$ 10.0 over 10,000 iterations).
+\item Phase 3: Add structural constraints ($\lambda_2$: 0.1 $\rightarrow$ 5.0).
+\item Phase 4: Include fitness penalties ($\lambda_3$: 0.1 $\rightarrow$ 2.0).
+\item Rationale: Sequential constraint introduction prevents competing objectives.
+\end{itemize}
 
 \textbf{Alternative Strategy 2: Variational Autoencoder (VAE) Approach}
-- Replace GAN with β-VAE for more stable training
-- Encoder: Env sequence → latent representation (128D)
-- Decoder: Latent vector → reconstructed sequence
-- Constraints implemented as regularization terms in VAE loss
-- Advantage: More stable training, explicit latent space control
+\begin{itemize}
+\item Replace GAN with $\beta$-VAE for more stable training.
+\item Encoder: Env sequence $\rightarrow$ latent representation (128D).
+\item Decoder: Latent vector $\rightarrow$ reconstructed sequence.
+\item Constraints implemented as regularization terms in VAE loss.
+\item Advantage: More stable training, explicit latent space control.
+\end{itemize}
 
 \textbf{Alternative Strategy 3: Transformer-Based Language Model}
-- Use GPT-style autoregressive model trained on Env sequences
-- Implement constraints through guided generation (CTRL methodology)
-- Fine-tune pre-trained protein language model (ProtGPT2, ESM-2)
-- Advantage: Leverages pre-trained knowledge, more interpretable
+\begin{itemize}
+\item Use GPT-style autoregressive model trained on Env sequences.
+\item Implement constraints through guided generation (CTRL methodology).
+\item Fine-tune pre-trained protein language model (ProtGPT2, ESM-2).
+\item Advantage: Leverages pre-trained knowledge, more interpretable.
+\end{itemize}
 
 \textbf{Decision Metrics:}
-- If discriminator loss plateaus for >10,000 iterations → Switch to VAE
-- If generated sequences show >50% structural failures → Implement progressive training
-- If training time exceeds 2 weeks → Switch to transformer approach
+\begin{itemize}
+\item If discriminator loss plateaus for $>$10,000 iterations $\rightarrow$ Switch to VAE.
+\item If generated sequences show $>$50\% structural failures $\rightarrow$ Implement progressive training.
+\item If training time exceeds 2 weeks $\rightarrow$ Switch to transformer approach.
+\end{itemize}
 
 \subsection{C.2 PITFALL: POOR PREDICTIVE ACCURACY}
 
@@ -852,41 +993,55 @@ issues.
 match actual emerging variants, limiting vaccine design utility.
 
 \textbf{Evidence of Risk:}
-- Protein design GANs often generate non-functional sequences
-- HIV evolution is influenced by host immune pressure not captured in sequence data
-- Recombination events create discontinuous evolutionary jumps
+\begin{itemize}
+\item Protein design GANs often generate non-functional sequences.
+\item HIV evolution is influenced by host immune pressure not captured in sequence data.
+\item Recombination events create discontinuous evolutionary jumps.
+\end{itemize}
 
 \textbf{Validation Strategy:}
-- Retrospective validation: Train on pre-2015 data, test against 2016-2023 sequences
-- Success threshold: >70% coverage of observed variants within 5% sequence identity
-- If threshold not met, implement alternative approaches below
+\begin{itemize}
+\item Retrospective validation: Train on pre-2015 data, test against 2016-2023 sequences.
+\item Success threshold: $>$70\% coverage of observed variants within 5\% sequence identity.
+\item If threshold not met, implement alternative approaches below.
+\end{itemize}
 
 \textbf{Alternative Strategy 1: Hybrid Physics-Empirical Model}
-- Combine TC-GAN with phylogenetic analysis (BEAST2 for evolutionary modeling)
-- Use TC-GAN to generate candidates, phylogenetic models to rank probability
-- Weight generated sequences by:
-  - Thermodynamic feasibility (TC-GAN score)
-  - Evolutionary plausibility (phylogenetic likelihood)
-  - Geographic/epidemiological factors
+\begin{itemize}
+\item Combine TC-GAN with phylogenetic analysis (BEAST2 for evolutionary modeling).
+\item Use TC-GAN to generate candidates, phylogenetic models to rank probability.
+\item Weight generated sequences by:
+  \begin{itemize}
+  \item Thermodynamic feasibility (TC-GAN score).
+  \item Evolutionary plausibility (phylogenetic likelihood).
+  \item Geographic/epidemiological factors.
+  \end{itemize}
+\end{itemize}
 
 \textbf{Alternative Strategy 2: Ensemble Approach}
-- Train multiple GAN variants with different architectures
-- Architecture 1: Focus on structural constraints (high λ2)
-- Architecture 2: Focus on fitness constraints (high λ3)
-- Architecture 3: Focus on entropy constraints (high λ1)
-- Final prediction: Consensus across all models (voting ensemble)
+\begin{itemize}
+\item Train multiple GAN variants with different architectures.
+\item Architecture 1: Focus on structural constraints (high $\lambda_2$).
+\item Architecture 2: Focus on fitness constraints (high $\lambda_3$).
+\item Architecture 3: Focus on entropy constraints (high $\lambda_1$).
+\item Final prediction: Consensus across all models (voting ensemble).
+\end{itemize}
 
 \textbf{Alternative Strategy 3: Active Learning with Real-Time Updates}
-- Deploy initial TC-GAN model with quarterly retraining
-- Monitor emerging variants in global surveillance data (GISAID)
-- Retrain model when prediction accuracy drops below 60%
-- Implement transfer learning to rapidly adapt to new variant patterns
+\begin{itemize}
+\item Deploy initial TC-GAN model with quarterly retraining.
+\item Monitor emerging variants in global surveillance data (GISAID).
+\item Retrain model when prediction accuracy drops below 60\%.
+\item Implement transfer learning to rapidly adapt to new variant patterns.
+\end{itemize}
 
 \textbf{Quantitative Benchmarks:}
-- Coverage metric: % of observed variants predicted within 5% identity
-- Precision metric: % of predicted variants that subsequently emerge
-- Novelty metric: % of predictions representing genuinely new variant space
-- Minimum acceptable: Coverage >70%, Precision >40%, Novelty >20%
+\begin{itemize}
+\item Coverage metric: \% of observed variants predicted within 5\% identity.
+\item Precision metric: \% of predicted variants that subsequently emerge.
+\item Novelty metric: \% of predictions representing genuinely new variant space.
+\item Minimum acceptable: Coverage $>$70\%, Precision $>$40\%, Novelty $>$20\%.
+\end{itemize}
 
 \subsection{C.3 PITFALL: COMPUTATIONAL RESOURCE LIMITATIONS}
 
@@ -894,34 +1049,44 @@ match actual emerging variants, limiting vaccine design utility.
 computational resources that may exceed available infrastructure.
 
 \textbf{Resource Requirements:}
-- Baseline GAN: ~100 GPU-hours for convergence
-- TC-GAN with constraints: Estimated 500-1000 GPU-hours
-- Structure prediction validation: Additional 200 GPU-hours
-- Total estimated: 1500 GPU-hours ($15,000-$30,000 cloud computing cost)
+\begin{itemize}
+\item Baseline GAN: $\sim$100 GPU-hours for convergence.
+\item TC-GAN with constraints: Estimated 500-1000 GPU-hours.
+\item Structure prediction validation: Additional 200 GPU-hours.
+\item Total estimated: 1500 GPU-hours (\$15,000-\$30,000 cloud computing cost).
+\end{itemize}
 
 \textbf{Alternative Strategy 1: Model Compression}
-- Implement knowledge distillation: Train small "student" model to mimic large "teacher"
-- Use quantization to reduce model precision (FP32 → FP16 → INT8)
-- Expected speedup: 3-5x reduction in computational requirements
-- Trade-off: Slight decrease in generation quality (acceptable if >90% retention)
+\begin{itemize}
+\item Implement knowledge distillation: Train small ``student'' model to mimic large ``teacher''.
+\item Use quantization to reduce model precision (FP32 $\rightarrow$ FP16 $\rightarrow$ INT8).
+\item Expected speedup: 3-5x reduction in computational requirements.
+\item Trade-off: Slight decrease in generation quality (acceptable if $>$90\% retention).
+\end{itemize}
 
 \textbf{Alternative Strategy 2: Transfer Learning}
-- Start with pre-trained protein language model (ESM-2, ProtBERT)
-- Fine-tune only top layers for HIV-specific generation
-- Reduces training time from weeks to days
-- Leverages existing knowledge of protein sequences
+\begin{itemize}
+\item Start with pre-trained protein language model (ESM-2, ProtBERT).
+\item Fine-tune only top layers for HIV-specific generation.
+\item Reduces training time from weeks to days.
+\item Leverages existing knowledge of protein sequences.
+\end{itemize}
 
 \textbf{Alternative Strategy 3: Distributed Training}
-- Partner with academic computing consortiums (XSEDE, Open Science Grid)
-- Implement model parallelism across multiple GPUs
-- Use gradient accumulation for large effective batch sizes
-- Timeline extension: Allow 6 months instead of 3 months for training
+\begin{itemize}
+\item Partner with academic computing consortiums (XSEDE, Open Science Grid).
+\item Implement model parallelism across multiple GPUs.
+\item Use gradient accumulation for large effective batch sizes.
+\item Timeline extension: Allow 6 months instead of 3 months for training.
+\end{itemize}
 
 \textbf{Resource Monitoring:}
-- Daily tracking of GPU utilization and training progress
-- If convergence not achieved by month 6 → Implement compression
-- If validation accuracy <60% → Switch to transfer learning
-- Budget monitoring: Alert if costs exceed $25,000
+\begin{itemize}
+\item Daily tracking of GPU utilization and training progress.
+\item If convergence not achieved by month 6 $\rightarrow$ Implement compression.
+\item If validation accuracy $<$60\% $\rightarrow$ Switch to transfer learning.
+\item Budget monitoring: Alert if costs exceed \$25,000.
+\end{itemize}
 
 \subsection{C.4 PITFALL: CONSTRAINT VIOLATIONS IN GENERATED SEQUENCES}
 
@@ -930,67 +1095,82 @@ penalty terms, producing thermodynamically impossible or biologically invalid
 variants.
 
 \textbf{Monitoring Metrics:}
-- Entropy violation rate: % of generated sequences with H > 0.1 in "frozen" regions
-- Structure violation rate: % with predicted pLDDT < 70
-- Fitness violation rate: % predicted as non-viable by auxiliary classifier
+\begin{itemize}
+\item Entropy violation rate: \% of generated sequences with $H > 0.1$ in ``frozen'' regions.
+\item Structure violation rate: \% with predicted pLDDT $<$ 70.
+\item Fitness violation rate: \% predicted as non-viable by auxiliary classifier.
+\end{itemize}
 
 \textbf{Alternative Strategy 1: Hard Constraints via Rejection Sampling}
-- Generate large batch of sequences (n=100,000)
-- Apply strict filtering: Reject any sequence violating constraints
-- Accept only sequences passing all validation tests
-- Trade-off: Lower generation efficiency but guaranteed constraint satisfaction
+\begin{itemize}
+\item Generate large batch of sequences (n=100,000).
+\item Apply strict filtering: Reject any sequence violating constraints.
+\item Accept only sequences passing all validation tests.
+\item Trade-off: Lower generation efficiency but guaranteed constraint satisfaction.
+\end{itemize}
 
 \textbf{Alternative Strategy 2: Guided Generation with Beam Search}
-- Implement beam search decoding instead of random sampling
-- At each position, select amino acid that minimizes constraint violation
-- Maintain multiple candidate sequences (beam width = 50)
-- Select final sequence with optimal constraint satisfaction
+\begin{itemize}
+\item Implement beam search decoding instead of random sampling.
+\item At each position, select amino acid that minimizes constraint violation.
+\item Maintain multiple candidate sequences (beam width = 50).
+\item Select final sequence with optimal constraint satisfaction.
+\end{itemize}
 
 \textbf{Alternative Strategy 3: Post-Processing Optimization}
-- Generate sequences with relaxed constraints
-- Apply post-hoc optimization to minimize constraint violations:
-  - Simulated annealing to optimize thermodynamic stability
-  - Local sequence optimization to reduce entropy deviations
-  - Fitness-guided mutations to improve viability scores
+\begin{itemize}
+\item Generate sequences with relaxed constraints.
+\item Apply post-hoc optimization to minimize constraint violations:
+  \begin{itemize}
+  \item Simulated annealing to optimize thermodynamic stability.
+  \item Local sequence optimization to reduce entropy deviations.
+  \item Fitness-guided mutations to improve viability scores.
+  \end{itemize}
+\end{itemize}
 
 \textbf{Quality Control Thresholds:}
-- Entropy violation rate: <5% acceptable, >15% requires alternative strategy
-- Structure violation rate: <10% acceptable, >25% requires intervention
-- Fitness violation rate: <20% acceptable, >40% requires alternative approach
+\begin{itemize}
+\item Entropy violation rate: $<$5\% acceptable, $>$15\% requires alternative strategy.
+\item Structure violation rate: $<$10\% acceptable, $>$25\% requires intervention.
+\item Fitness violation rate: $<$20\% acceptable, $>$40\% requires alternative approach.
+\end{itemize}
 
 
-\section{TIMELINE \& MILESTONES} & MILESTONES
-
+\section{TIMELINE AND MILESTONES}
 
 \textbf{YEAR 1 (Months 1-12):}
-- Aim 1: Entropy validation, aptamer development, protease engineering
-- Aim 2: Dataset preparation, baseline GAN training, constraint implementation
-- Aim 3: Reporter construct development, in vitro validation
-- Key Milestones: HR1 entropy confirmed H=0.0, functional aptamers identified, 
-  baseline TC-GAN operational
+\begin{itemize}
+\item Aim 1: Entropy validation, aptamer development, protease engineering.
+\item Aim 2: Dataset preparation, baseline GAN training, constraint implementation.
+\item Aim 3: Reporter construct development, in vitro validation.
+\item Key Milestones: HR1 entropy confirmed $H=0.0$, functional aptamers identified, baseline TC-GAN operational.
+\end{itemize}
 
 \textbf{YEAR 2 (Months 13-24):}
-- Aim 1: Aptamer-protease chimera construction, cell-based validation
-- Aim 2: TC-GAN training completion, variant library generation, retrospective validation
-- Aim 3: Sentinel cell engineering, humanized mouse model establishment
-- Key Milestones: Proteolytic nanobombs functional, 10,000 variant library 
-  generated, sentinel cells deployed in mice
+\begin{itemize}
+\item Aim 1: Aptamer-protease chimera construction, cell-based validation.
+\item Aim 2: TC-GAN training completion, variant library generation, retrospective validation.
+\item Aim 3: Sentinel cell engineering, humanized mouse model establishment.
+\item Key Milestones: Proteolytic nanobombs functional, 10,000 variant library generated, sentinel cells deployed in mice.
+\end{itemize}
 
 \textbf{YEAR 3 (Months 25-36):}
-- Aim 1: In vivo efficacy testing, humanized mouse trials
-- Aim 2: Adversarial vaccine design, immunogenicity testing, surveillance dashboard
-- Aim 3: Clinical translation preparation, GMP production, IND documentation
-- Key Milestones: Proof-of-concept efficacy demonstrated, mosaic vaccine tested, 
-  IND package submitted
+\begin{itemize}
+\item Aim 1: In vivo efficacy testing, humanized mouse trials.
+\item Aim 2: Adversarial vaccine design, immunogenicity testing, surveillance dashboard.
+\item Aim 3: Clinical translation preparation, GMP production, IND documentation.
+\item Key Milestones: Proof-of-concept efficacy demonstrated, mosaic vaccine tested, IND package submitted.
+\end{itemize}
 
 \textbf{CRITICAL DECISION POINTS:}
-- Month 8: If entropy analysis shows H > 0.1 for HR1 → Identify alternative targets
-- Month 18: If TC-GAN validation accuracy < 70% → Implement ensemble approach
-- Month 30: If in vivo efficacy < 2-log reduction → Combine with standard ART
+\begin{itemize}
+\item Month 8: If entropy analysis shows $H > 0.1$ for HR1 $\rightarrow$ Identify alternative targets.
+\item Month 18: If TC-GAN validation accuracy $<$ 70\% $\rightarrow$ Implement ensemble approach.
+\item Month 30: If in vivo efficacy $<$ 2-log reduction $\rightarrow$ Combine with standard ART.
+\end{itemize}
 
 
-\section{SIGNIFICANCE \& IMPACT} & IMPACT
-
+\section{SIGNIFICANCE AND IMPACT}
 
 \textbf{SCIENTIFIC IMPACT:}
 This proposal establishes the first physics-based framework for pathogen defense, 
@@ -999,34 +1179,37 @@ demonstrates that thermodynamic constraints, not biological conservation, define
 the true vulnerabilities of pathogens.
 
 \textbf{CLINICAL IMPACT:}
-- Primary: Functional cure for HIV affecting 38 million individuals globally
-- Secondary: Universal framework applicable to influenza, coronaviruses, malaria
-- Tertiary: Paradigm shift in vaccine development from reactive to prospective
+\begin{itemize}
+\item Primary: Functional cure for HIV affecting 38 million individuals globally.
+\item Secondary: Universal framework applicable to influenza, coronaviruses, malaria.
+\item Tertiary: Paradigm shift in vaccine development from reactive to prospective.
+\end{itemize}
 
 \textbf{TECHNOLOGICAL IMPACT:}
-- TC-GAN methodology applicable to any evolving pathogen
-- Sentinel cell technology revolutionizes latency monitoring across diseases
-- Physics-based drug design principles generalizable beyond infectious disease
+\begin{itemize}
+\item TC-GAN methodology applicable to any evolving pathogen.
+\item Sentinel cell technology revolutionizes latency monitoring across diseases.
+\item Physics-based drug design principles generalizable beyond infectious disease.
+\end{itemize}
 
 \textbf{ECONOMIC IMPACT:}
-- HIV treatment costs: $500 billion annually worldwide
-- Vaccine development acceleration: Reduce 10-year timelines to 2-3 years
-- Prevention of future pandemics through prospective surveillance
+\begin{itemize}
+\item HIV treatment costs: \$500 billion annually worldwide.
+\item Vaccine development acceleration: Reduce 10-year timelines to 2-3 years.
+\item Prevention of future pandemics through prospective surveillance.
+\end{itemize}
 
 \textbf{DELIVERABLES TO SCIENTIFIC COMMUNITY:}
-1. Open-source TC-GAN codebase with full documentation
-2. Public database of 10,000 predicted HIV variants
-3. Validated entropy analysis pipeline for any pathogen
-4. Clinical-grade sentinel cell vector designs
-5. Real-time surveillance dashboard for global use
+\begin{enumerate}
+\item Open-source TC-GAN codebase with full documentation.
+\item Public database of 10,000 predicted HIV variants.
+\item Validated entropy analysis pipeline for any pathogen.
+\item Clinical-grade sentinel cell vector designs.
+\item Real-time surveillance dashboard for global use.
+\end{enumerate}
 
 This proposal represents a paradigm shift from reactive medicine to predictive 
 defense, establishing principles that will define 21st-century pathogen control.
-
-
-END OF PROPOSAL
-
-
 
 \printbibliography[title=References]
 \end{document}
