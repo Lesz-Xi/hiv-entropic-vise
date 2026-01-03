@@ -12,7 +12,7 @@ VISE_END_IDX = 576
 SEQ_LENGTH = 850  # Approx length of Env
 
 class ThermodynamicDiscriminator(nn.Module):
-    """
+    """ 
     The 'Physicist'.
     This is NOT a learnable network. It is a differentiable physics engine.
     """
