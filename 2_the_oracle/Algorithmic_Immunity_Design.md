@@ -1,58 +1,71 @@
-# Algorithmic Immunity: Technical Design Document
-**System:** Thermodynamically Constrained Generative Adversarial Network (TC-GAN)
-**Role:** Predictive modeling of viral escape within physical capability.
+# Algorithmic Immunity: Technical Design Document (v2)
+**System:** Thermodynamically Constrained Generative Models (TC-GM)
+**Role:** Predictive modeling of viral escape within physical constraints.
 
 ## 1. Architectural Philosophy
 Standard viral prediction models (EVE, MutaGAN) operate on **Probabilistic Evolution** ("What is likely?").
-Our system operates on **First Principles Constraint** ("What is physically allowed?").
-We inject the "Entropic Vise" (thermodynamic immutability) as a non-negotiable axiom in the neural network's loss landscape.
+Our system operates on **First Principles Constraint** ("What is physically allowed at tolerable fitness cost?").
+We inject the "Entropic Vise" (high-barrier thermodynamic constraints) as a core axiom in the generative model's conditioning.
+
+**v2 Update:** We are transitioning from GANs to **Diffusion-based architectures** (RFdiffusion, ProteinMPNN) which offer superior handling of structural constraints and avoid mode collapse issues.
 
 ## 2. System Architecture
 
-### A. The Generator ($G$)
-*   **Architecture:** Transformer-based Decoder (e.g., GPT-2 variant adapted for Protein sequences).
-*   **Input:** 
-    *   Latent Noise ($z \sim \mathcal{N}(0,1)$)
-    *   Conditioning Vector ($c$): Represents the immune pressure (e.g., "Anti-V3-Loop Antibody").
-*   **Output:** $S_{gen}$ (A generated amino acid sequence of the HIV-1 Env spike).
+### A. Option 1: TC-GAN (Original Design)
+*   **Architecture:** Transformer-based Decoder adapted for protein sequences.
+*   **Limitation:** GANs suffer from mode collapse, failing to capture the full diversity of viable escape variants.
 
-### B. The Dual-Discriminator System
-Instead of a single critic, we employ two distinct feedback loops:
+### B. Option 2: Diffusion Models (Recommended)
+*   **Architecture:** RFdiffusion or similar diffusion-based protein design model.
+*   **Mechanism:** Gradual denoising of random 3D coordinates into valid protein backbone structures.
+*   **Advantages:**
+    - Inherently respects physical and geometric constraints
+    - Superior structural fidelity
+    - Allows "inpainting" of protein structures or design of binders against specific targets
+*   **Integration:** ProteinMPNN can generate sequences thermodynamically optimal for a given backbone.
 
-#### 1. The Semantic Discriminator ($D_{bio}$)
-*   **Role:** The "Virologist."
-*   **Mechanism:** A standard Deep CNN or Transformer Classifier.
-*   **Training:** Trained on real Los Alamos sequences vs. Generated sequences.
-*   **Output:** `Realness_Score` (Probability that the sequence is a valid, functional virus).
-*   **Goal:** Ensures the output looks like HIV.
+## 3. Target Definition (v2 Corrected)
 
-#### 2. The Thermodynamic Discriminator ($D_{phys}$)
-*   **Role:** The "Physicist" (The Entropic Vise).
-*   **Mechanism:** A deterministic, non-learnable filter function.
-*   **Logic:**
-    1.  Extract residues corresponding to **HR1 (568-576)** and **MPER (678-682)** from $S_{gen}$.
-    2.  Calculate **Hamming Distance** ($H$) between $S_{gen}[region]$ and the Immutable Reference (`LTVWGIKQL`).
-    3.  If $H > 0$: Return **Heavy Penalty**.
-*   **Goal:** Strictly strictly forbids "cheating" (mutating the un-mutable to escape).
+| Region | HXB2 Coordinates | Sequence | Role |
+| :--- | :--- | :--- | :--- |
+| **HR1 (Primary)** | 546–556 | SGIVQQQNNLL | Inner core of 6-helix bundle |
+| **MPER (Secondary)** | 678–682 | WLWYI | Membrane-proximal region |
 
-## 3. Loss Function ($L$)
-The total loss function guides the Generator's learning process:
+**Critical Note:** The original coordinates (568-576) were incorrect. The corrected target is **546-556**, validated against the standard HXB2 numbering scheme.
 
-$$L_{total} = L_{WGAN} + \lambda_{vise} \cdot L_{vise}$$
+## 4. Constraint Enforcement
 
-*   **$L_{WGAN}$:** Wasserstein Loss (Standard GAN loss for stability and sequence quality).
-*   **$L_{vise}$:** The Entropic Penalty.
-    *   Defined as: $\sum_{region} || S_{gen}^{region} - S_{ref}^{region} ||^2$
-    *   **$\lambda_{vise}$:** A hyperparameter set to a massive value (e.g., $10^5$). This acts as an "Infinite Wall," forcing the gradient descent to steer away from mutating these regions instantly.
+### The Thermodynamic Penalty ($L_{vise}$)
+Instead of treating the HR1 region as "absolutely immutable," we model it as a **high-barrier constraint** with fitness cost:
 
-## 4. Execution Workflow
-1.  **Training:** Train TC-GAN on the 8,735 sequences from Phase 1.
-2.  **Inference (The Attack Simulation):**
-    *   Simulate "high antibody pressure" (via Conditioning Vector).
-    *   Generate 1,000,000 potential escape variants.
-3.  **Filtering:** Keep only unique, bio-plausible variants.
-4.  **Result:** A library of "Future Viruses" that have escaped the antibody *but* still have the "Vise" (HR1) intact.
-5.  **Therapeutic Validation:** Verify that our "Proteolytic Nanobomb" (which targets HR1) would still kill 100% of these future predicted strains.
+$$L_{total} = L_{diffusion} + \lambda_{vise} \cdot L_{vise}$$
 
-## 5. Summary
-We are not just predicting evolution; we are **channeling** it. By blocking the "easy" escape routes (thermodynamically impossible ones), we force the AI to reveal the *actual* dangerous mutations that could emerge in the real world.
+Where $L_{vise}$ is:
+- **Strict mode:** Hamming distance penalty against reference sequence
+- **Fitness-aware mode:** Predicted ΔΔG (stability change) for mutations in constrained regions
+
+**Resistance Consideration:** Known escape mutations (V38A, N43D) should be included in training to understand fitness cost landscapes.
+
+## 5. Execution Workflow
+1.  **Training:** Condition diffusion model on historical Env evolution + thermodynamic stability data.
+2.  **Inference (Attack Simulation):**
+    *   Simulate "high antibody pressure" or "drug pressure" scenarios.
+    *   Generate diverse escape variant library.
+3.  **Filtering:** Retain variants that are bio-plausible AND preserve core structure.
+4.  **Result:** A "Future Virus Library" constrained by thermodynamic reality.
+5.  **Therapeutic Validation:** Verify that Aptamer-Protease chimeras maintain efficacy against predicted variants.
+
+## 6. Future Directions
+
+- **SELEX Screening:** Generate aptamer libraries against both wild-type (SGIVQQQNNLL) and mutant (V38A) peptides.
+- **Binding Kinetics:** Compare Kd values across mutation panels via SPR.
+- **Cleavage Assays:** Measure protease cleavage efficiency against wild-type and mutant substrates.
+
+## 7. Summary
+We are not just predicting evolution; we are **channeling** it within thermodynamic constraints. The diffusion model approach offers superior protein design capabilities while respecting the physical limits of viral adaptation.
+
+---
+**References:**
+- RFdiffusion: Baker Lab (2023)
+- ProteinMPNN: Dauparas et al. (2022)
+- Enfuvirtide resistance data: Greenberg & Cammack (2004) JAC
