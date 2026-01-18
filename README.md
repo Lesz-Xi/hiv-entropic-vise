@@ -1,20 +1,20 @@
 # HIV Entropic Vise
 
-**A Physics-Based Framework for HIV-1 Eradication**
+**A Physics-Based Framework for High-Barrier Thermodynamic Targeting of HIV-1**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-gold.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![LaTeX](https://img.shields.io/badge/Preprint-Zenodo-blue.svg)](proposals/arxiv_preprint.tex)
+[![LaTeX](https://img.shields.io/badge/Preprint-Zenodo-blue.svg)](Zenodo/arxiv_preprint.tex)
 
 ---
 
 ## Overview
 
-This repository contains the source code, computational analysis, and research preprint for a physics-based approach to HIV-1 eradication. Unlike traditional biological targeting that fails due to viral mutation, this framework exploits **high-barrier thermodynamic constraints**—regions where mutations impose severe fitness costs on the virus.
+This repository contains the source code, computational analysis, and research preprint for a physics-based approach to **High-Barrier Thermodynamic Targeting** of HIV-1. Unlike traditional biological targeting that fails due to viral mutation, this framework exploits **thermodynamic constraints**—regions where mutations are not impossible, but impose severe **fitness costs** on the virus.
 
 ### The Core Discovery: The Entropic Vise
 
-**Shannon entropy analysis of 3,552+ HIV-1 envelope sequences reveals a high-barrier region in the gp41 HR1 domain (HXB2 residues 546-556, sequence SGIVQQQNNLL) with near-zero entropy**—indicating strong purifying selection across 40 years of global evolution. While resistance mutations (e.g., V38A, N43D) can emerge under selective pressure (as seen with Enfuvirtide), these mutants exhibit significant fitness costs.
+**Shannon entropy analysis of 3,552+ HIV-1 envelope sequences reveals a high-barrier region in the gp41 HR1 domain (HXB2 residues 546-556, sequence SGIVQQQNNLL) with near-zero entropy**—indicating strong purifying selection. While resistance mutations (e.g., V38A, N43D) can emerge under selective pressure, they incur significant fitness penalties, validating the "Entropic Vise" as a strategy to force the virus into a compromised, low-fitness state.
 
 ---
 
@@ -36,12 +36,12 @@ This repository contains the source code, computational analysis, and research p
 - `designs/` — Conceptual frameworks for "Sentinel Cells" with humanized reporters (ΔNGFR, Truncated CD19)
 - `Zero_Trust_Feasibility.md` — Literature validation of biosensor implants
 
-### 4. Proposals (`/proposals`)
-**Objective:** Research Preprint and Theoretical Framework.
-- `arxiv_preprint.tex` — Final Preprint (Submitted to Zenodo)
-- `main.tex` — Original NIH-style draft (reference only)
-- `references.bib` — BibTeX bibliography (17 citations)
-- `image.png` — Entropy analysis figure
+### 4. Zenodo Distribution (`/Zenodo`)
+**Objective:** Final Manuscript and K-Dense AI Audit Materials.
+- `arxiv_preprint.tex` — v2.2 Manuscript (Revised Post-Audit)
+- `K-Dense_Report.md` — Independent AI Audit Report (Grade: A-)
+- `references.bib` — Bibliography
+- `K-Dense_Report.html` — Web-viewable Audit Report
 
 ---
 
